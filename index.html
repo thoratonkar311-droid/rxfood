@@ -3,133 +3,173 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RxFood — Drug Food Interaction Visualizer</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>RxFood — Drug-Food Interaction Visualizer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 
 body{
-font-family:Arial, sans-serif;
-background:#0f1117;
-color:white;
+background:#0a0e1a;
+color:#e2e8f0;
+font-family:'DM Sans',sans-serif;
 margin:0;
-padding:0;
 }
 
-header{
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 32px;
+background:#111827;
+border-bottom:1px solid #1e2d45;
+}
+
+.nav-logo{
+font-family:'Playfair Display',serif;
+font-size:24px;
+font-weight:900;
+color:#00d4ff;
+}
+
+.hero{
 text-align:center;
-padding:30px;
-font-size:28px;
-font-weight:bold;
-}
-
-.container{
+padding:60px 20px;
 max-width:900px;
 margin:auto;
-padding:20px;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#94a3b8;
+}
+
+.search-section{
+max-width:700px;
+margin:30px auto;
+padding:0 20px;
 }
 
 .search-box{
 display:flex;
-gap:10px;
-margin-bottom:10px;
-}
-
-input{
-flex:1;
-padding:12px;
-border-radius:8px;
-border:none;
-font-size:16px;
-}
-
-button{
-padding:12px 18px;
-border:none;
-border-radius:8px;
-background:#4f46e5;
-color:white;
-cursor:pointer;
-}
-
-button:hover{
-opacity:.9;
-}
-
-#suggestions{
-background:#1c1f26;
-border-radius:6px;
+background:#111827;
+border:1px solid #1e2d45;
+border-radius:12px;
 overflow:hidden;
 }
 
-#suggestions div{
-padding:8px;
-cursor:pointer;
+#searchInput{
+flex:1;
+padding:16px;
+background:transparent;
+border:none;
+color:white;
+font-size:16px;
 }
 
-#suggestions div:hover{
-background:#333;
+.search-btn{
+background:#00d4ff;
+border:none;
+padding:14px 26px;
+cursor:pointer;
+font-weight:600;
 }
 
 .quick-pills{
-margin:10px 0;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+justify-content:center;
+margin-top:15px;
 }
 
 .pill{
+background:#1a2235;
+border:1px solid #1e2d45;
+color:#94a3b8;
 padding:6px 12px;
-margin:4px;
-border:none;
 border-radius:20px;
-background:#1c1f26;
-color:white;
 cursor:pointer;
 }
 
-.results{
+#results{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+.drug-card{
+background:#111827;
+border:1px solid #1e2d45;
+border-radius:16px;
+padding:24px;
+margin-bottom:30px;
+}
+
+.drug-name{
+font-size:28px;
+font-family:'Playfair Display',serif;
+}
+
+.interactions-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+gap:16px;
 margin-top:20px;
 }
 
-.card{
-background:#1c1f26;
+.ic{
+background:#1a2235;
+border-radius:12px;
 padding:16px;
-margin-bottom:12px;
-border-radius:10px;
+cursor:pointer;
 }
 
-.high{border-left:6px solid #ff4d4d;}
-.medium{border-left:6px solid #ffa500;}
-.low{border-left:6px solid #2ecc71;}
+.ic.high{border-left:5px solid #ef4444}
+.ic.medium{border-left:5px solid #f59e0b}
+.ic.low{border-left:5px solid #10b981}
 
-.modal{
+.ic-food-name{
+font-weight:600;
+font-size:18px;
+}
+
+.ic-mech{
+font-size:14px;
+color:#94a3b8;
+margin-top:6px;
+}
+
+.modal-overlay{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
 background:rgba(0,0,0,.8);
-display:flex;
+display:none;
 align-items:center;
 justify-content:center;
 }
 
-.modal-content{
-background:#1c1f26;
-padding:25px;
-border-radius:10px;
-max-width:500px;
+.modal{
+background:#111827;
+padding:30px;
+border-radius:16px;
+max-width:600px;
 }
 
-footer{
-text-align:center;
-font-size:13px;
-color:#aaa;
-margin-top:40px;
-}
-
-@media(max-width:768px){
-.search-box{
-flex-direction:column;
-}
+.close-btn{
+margin-top:20px;
+padding:8px 14px;
+cursor:pointer;
 }
 
 </style>
@@ -137,262 +177,143 @@ flex-direction:column;
 
 <body>
 
-<header>RxFood Interaction Visualizer</header>
+<nav>
+<div class="nav-logo">RxFood</div>
+</nav>
 
-<div class="container">
+<section class="hero">
+<h1>Drug-Food Interaction Visualizer</h1>
+<p>Search a medicine or food to discover possible interactions.</p>
+</section>
+
+<section class="search-section">
 
 <div class="search-box">
 <input id="searchInput" placeholder="Search drug or food...">
-<button onclick="search()">Analyze</button>
+<button class="search-btn" onclick="search()">Analyze</button>
 </div>
 
-<div id="suggestions"></div>
+<div class="quick-pills" id="pills"></div>
 
-<div class="quick-pills" id="quickPills"></div>
+</section>
 
-<div class="results" id="results"></div>
+<section id="results"></section>
 
-<footer>
-⚠ Educational tool only. Consult healthcare professionals for medical advice.
-</footer>
-
+<div class="modal-overlay" id="modal">
+<div class="modal">
+<h2 id="modalTitle"></h2>
+<p id="modalText"></p>
+<button class="close-btn" onclick="closeModal()">Close</button>
+</div>
 </div>
 
 <script>
 
-const db = [
+const database=[
 
 {
 drug:"Warfarin",
+class:"Anticoagulant",
 interactions:[
-{
-food:"Leafy Greens",
-severity:"high",
-reason:"Vitamin K reduces anticoagulant effect",
-pathway:[
-"Leafy greens consumed",
-"Vitamin K increases",
-"Warfarin effect reduced",
-"Clotting risk increases"
-]
-},
-{
-food:"Cranberry Juice",
-severity:"medium",
-reason:"May increase bleeding risk",
-pathway:[
-"Cranberry compounds absorbed",
-"Metabolism altered",
-"Warfarin level increases"
-]
-}
+{food:"Leafy Greens",severity:"high",mechanism:"Vitamin K reduces anticoagulant effect"},
+{food:"Cranberry",severity:"medium",mechanism:"May increase bleeding risk"}
 ]
 },
 
 {
 drug:"Simvastatin",
+class:"Statin",
 interactions:[
-{
-food:"Grapefruit",
-severity:"high",
-reason:"Blocks CYP3A4 metabolism",
-pathway:[
-"Grapefruit eaten",
-"CYP3A4 inhibited",
-"Drug metabolism reduced",
-"Statin toxicity risk"
-]
-}
+{food:"Grapefruit",severity:"high",mechanism:"Blocks CYP3A4 metabolism causing toxicity"}
 ]
 },
 
 {
 drug:"Metformin",
+class:"Antidiabetic",
 interactions:[
-{
-food:"Alcohol",
-severity:"medium",
-reason:"May cause lactic acidosis",
-pathway:[
-"Alcohol intake",
-"Liver metabolism change",
-"Lactate buildup"
-]
-}
-]
-},
-
-{
-drug:"Ibuprofen",
-interactions:[
-{
-food:"Alcohol",
-severity:"high",
-reason:"Increases stomach bleeding",
-pathway:[
-"Alcohol irritates stomach",
-"NSAID damages lining",
-"Bleeding risk increases"
-]
-}
-]
-},
-
-{
-drug:"Aspirin",
-interactions:[
-{
-food:"Alcohol",
-severity:"high",
-reason:"Higher risk of stomach bleeding",
-pathway:[
-"Alcohol intake",
-"Gastric irritation",
-"Platelet inhibition"
-]
-}
+{food:"Alcohol",severity:"medium",mechanism:"Risk of lactic acidosis"}
 ]
 },
 
 {
 drug:"Ciprofloxacin",
+class:"Antibiotic",
 interactions:[
-{
-food:"Dairy",
-severity:"medium",
-reason:"Calcium blocks antibiotic absorption",
-pathway:[
-"Calcium binds drug",
-"Absorption reduced",
-"Antibiotic effect decreases"
-]
-}
+{food:"Dairy",severity:"medium",mechanism:"Calcium reduces drug absorption"}
 ]
 }
 
-];
+]
 
-const input=document.getElementById("searchInput");
-const suggestions=document.getElementById("suggestions");
-const results=document.getElementById("results");
-const quick=document.getElementById("quickPills");
+const pills=document.getElementById("pills")
+const results=document.getElementById("results")
 
-function loadPills(){
-db.forEach(d=>{
-let b=document.createElement("button");
-b.className="pill";
-b.innerText=d.drug;
+database.forEach(d=>{
+let b=document.createElement("button")
+b.className="pill"
+b.innerText=d.drug
 b.onclick=()=>{
-input.value=d.drug;
-search();
-};
-quick.appendChild(b);
-});
+document.getElementById("searchInput").value=d.drug
+search()
 }
+pills.appendChild(b)
+})
 
 function search(){
 
-let q=input.value.toLowerCase();
-results.innerHTML="";
+let q=document.getElementById("searchInput").value.toLowerCase()
+results.innerHTML=""
 
-db.forEach(d=>{
+database.forEach(d=>{
 
-if(d.drug.toLowerCase()==q){
-
-d.interactions.forEach(i=>{
-createCard(d.drug,i);
-});
-
-}
-
-d.interactions.forEach(i=>{
-if(i.food.toLowerCase()==q){
-createFoodCard(i.food,d.drug,i);
-}
-});
-
-});
-
-}
-
-function createCard(drug,i){
-
-let card=document.createElement("div");
-card.className="card "+i.severity;
-
-card.innerHTML=`
-<h3>${drug} + ${i.food}</h3>
-<p><b>Severity:</b> ${i.severity}</p>
-<p>${i.reason}</p>
-<button onclick="openModal('${i.food}','${i.reason}','${i.pathway.join("|")}')">View Pathway</button>
-`;
-
-results.appendChild(card);
-
-}
-
-function createFoodCard(food,drug,i){
-
-let card=document.createElement("div");
-card.className="card "+i.severity;
-
-card.innerHTML=`
-<h3>${food} with ${drug}</h3>
-<p><b>Severity:</b> ${i.severity}</p>
-<p>${i.reason}</p>
-`;
-
-results.appendChild(card);
-
-}
-
-input.addEventListener("input",()=>{
-
-let q=input.value.toLowerCase();
-suggestions.innerHTML="";
-
-db.forEach(d=>{
 if(d.drug.toLowerCase().includes(q)){
-let s=document.createElement("div");
-s.innerText=d.drug;
-s.onclick=()=>{
-input.value=d.drug;
-suggestions.innerHTML="";
-search();
-};
-suggestions.appendChild(s);
-}
-});
 
-});
+let card=document.createElement("div")
+card.className="drug-card"
 
-function openModal(food,reason,path){
+card.innerHTML=`
+<div class="drug-name">${d.drug}</div>
+<div class="interactions-grid"></div>
+`
 
-let steps=path.split("|");
+let grid=card.querySelector(".interactions-grid")
 
-let modal=document.createElement("div");
-modal.className="modal";
+d.interactions.forEach(i=>{
 
-let list="";
-steps.forEach(s=>{
-list+=`<li>${s}</li>`;
-});
+let ic=document.createElement("div")
+ic.className="ic "+i.severity
 
-modal.innerHTML=`
-<div class="modal-content">
-<h2>${food} Interaction</h2>
-<p>${reason}</p>
-<h3>Molecular Pathway</h3>
-<ul>${list}</ul>
-<button onclick="this.parentElement.parentElement.remove()">Close</button>
-</div>
-`;
+ic.innerHTML=`
+<div class="ic-food-name">${i.food}</div>
+<div class="ic-mech">${i.mechanism}</div>
+`
 
-document.body.appendChild(modal);
+ic.onclick=()=>openModal(d.drug,i)
+
+grid.appendChild(ic)
+
+})
+
+results.appendChild(card)
 
 }
 
-loadPills();
+})
+
+}
+
+function openModal(drug,i){
+
+document.getElementById("modalTitle").innerText=drug+" + "+i.food
+document.getElementById("modalText").innerText=i.mechanism
+document.getElementById("modal").style.display="flex"
+
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none"
+}
 
 </script>
 
