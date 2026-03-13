@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RxFood — Drug-Food Interaction Visualizer</title>
+  <meta name="description" content="Visualize chemical interactions between your drugs and food. Know what not to eat with your medication."/>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">Rx<span>Food</span></div>
+  <div class="nav-links">
+    <a href="#search-sec">Search</a>
+    <a href="#how-sec">How It Works</a>
+    <a href="#about-sec">About</a>
+    <a href="/dashboard.html">📊 Dashboard</a>
+  </div>
+  <div class="nav-badge">Beta v2.0</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">⚗️ Drug–Food Interaction Visualizer</div>
+  <h1>Know What <em>Not to Eat</em><br>With Your Medication</h1>
+  <p>Visualize chemical interactions between your drugs and food at a molecular level. Powered by real pharmacological data — explained in plain English.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">35+</div><div class="stat-label">Drugs</div></div>
+    <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Interactions</div></div>
+    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Food Categories</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Risk Levels</div></div>
+  </div>
+</section>
+
+<!-- SEARCH -->
+<div id="search-sec" class="search-section">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input id="searchInput" type="text"
+      placeholder="Search drug name e.g. Warfarin, Paracetamol, Metformin…"
+      autocomplete="off"/>
+    <button class="search-btn" onclick="searchDrug()">Analyze</button>
+    <div class="suggestions" id="suggestions"></div>
+  </div>
+  <div class="quick-pills" id="quickPills"></div>
+</div>
+
+<!-- RESULTS -->
+<div id="results"></div>
+
+<!-- HOW IT WORKS -->
+<section id="how-sec" class="section">
+  <div class="sec-label">Science Behind It</div>
+  <div class="sec-title">How Drug–Food<br>Interactions Work</div>
+  <p style="color:var(--dim);max-width:600px;line-height:1.7;">Food compounds can alter how your body absorbs, metabolizes, or excretes medications — sometimes dangerously increasing or decreasing drug levels in your blood.</p>
+  <div class="how-grid">
+    <div class="how-card">
+      <div class="how-num">01</div>
+      <div class="how-title">Enzyme Inhibition</div>
+      <div class="how-desc">Food compounds like furanocoumarins in grapefruit block CYP3A4 liver enzymes, causing drugs to accumulate to dangerous levels.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">02</div>
+      <div class="how-title">Absorption Interference</div>
+      <div class="how-desc">Dairy calcium, iron in spinach, or high-fiber foods can bind to drug molecules in the gut, reducing absorption into the bloodstream.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">03</div>
+      <div class="how-title">Vitamin K Antagonism</div>
+      <div class="how-desc">Blood thinners like Warfarin work by blocking Vitamin K. Eating large amounts of leafy greens floods the system and reduces drug effect.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">04</div>
+      <div class="how-title">Tyramine Crisis</div>
+      <div class="how-desc">MAO inhibitors prevent tyramine breakdown. Eating aged cheese or cured meats causes dangerous blood pressure spikes — hypertensive crisis.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about-sec" class="section" style="border-top:1px solid var(--border)">
+  <div class="sec-label">About This Tool</div>
+  <div class="sec-title">Built for Patients,<br>Reviewed for Safety</div>
+  <p style="color:var(--dim);max-width:650px;line-height:1.7;margin-bottom:1.5rem;">RxFood aggregates drug-food interaction data from DrugBank, NIH DailyMed, and peer-reviewed pharmacology literature. Every interaction is explained at a molecular level, translated into clear language for non-experts.</p>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem 1.5rem;font-size:.88rem">
+      <div style="color:var(--accent);font-family:'DM Mono',monospace;font-size:.75rem;margin-bottom:4px">DATA SOURCE</div>
+      <div>DrugBank v5.1 + NIH DailyMed</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem 1.5rem;font-size:.88rem">
+      <div style="color:var(--accent3);font-family:'DM Mono',monospace;font-size:.75rem;margin-bottom:4px">API</div>
+      <div>REST API — <a href="/api/drugs" style="color:var(--accent)">View Docs</a></div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem 1.5rem;font-size:.88rem">
+      <div style="color:var(--accent2);font-family:'DM Mono',monospace;font-size:.75rem;margin-bottom:4px">LAST UPDATED</div>
+      <div>March 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+  <div class="disclaimer-inner">
+    <div style="font-size:1.3rem;flex-shrink:0">⚠️</div>
+    <p><strong>Medical Disclaimer:</strong> RxFood is for informational and educational purposes only. It does not constitute medical advice. Always consult your physician or pharmacist before making changes to your diet or medication. Individual responses to drug-food interactions may vary.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">RxFood</div>
+  <div class="footer-copy">© 2026 RxFood · Drug-Food Interaction Visualizer</div>
+  <div class="footer-links">
+    <a href="#how-sec">How It Works</a>
+    <a href="#about-sec">About</a>
+    <a href="/dashboard.html">Dashboard</a>
+    <a href="/api/drugs">API</a>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
