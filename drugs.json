@@ -1,0 +1,2993 @@
+{
+  "Warfarin": {
+    "generic": "Warfarin Sodium",
+    "class": "Anticoagulant",
+    "mechanism": "Vitamin K antagonist — inhibits clotting factors II, VII, IX, X",
+    "halfLife": "20–60 hours",
+    "metabolism": "Hepatic CYP2C9",
+    "icon": "💊",
+    "interactions": [
+      {
+        "food": "Leafy Greens",
+        "emoji": "🥬",
+        "compound": "Vitamin K (phylloquinone)",
+        "severity": "high",
+        "mechanism": "Leafy greens contain high Vitamin K which directly counteracts Warfarin's anticoagulation mechanism. Warfarin works by blocking Vitamin K epoxide reductase. A sudden increase in Vitamin K can reduce INR and increase clotting risk.",
+        "pathway": [
+          "Warfarin ingested",
+          "Blocks VKOR enzyme",
+          "↓ Vitamin K recycling",
+          "↓ Clotting factors",
+          "Vitamin K from greens",
+          "Competes with block",
+          "↑ Clotting factors restored"
+        ],
+        "effect": "Decreased drug efficacy — increased stroke/clot risk",
+        "timing": "Avoid sudden large changes; keep intake consistent",
+        "window": "Consistent intake OK; avoid sudden increases",
+        "alternatives": [
+          "Cucumber",
+          "Zucchini",
+          "Mushrooms",
+          "Onions"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Consistent small amounts OK; large sudden doses dangerous"
+      },
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins (bergamottin)",
+        "severity": "medium",
+        "mechanism": "Furanocoumarins in grapefruit irreversibly inhibit CYP3A4 liver enzymes. Though Warfarin is primarily CYP2C9, grapefruit affects related pathways that can alter drug concentration and increase bleeding risk.",
+        "pathway": [
+          "Grapefruit consumed",
+          "Furanocoumarins absorbed",
+          "CYP3A4 inhibited",
+          "Drug metabolism slowed",
+          "Higher drug blood levels",
+          "↑ Anticoagulation",
+          "Bleeding risk elevated"
+        ],
+        "effect": "Elevated Warfarin levels — increased bleeding risk",
+        "timing": "Avoid entirely or separate by 4+ hours",
+        "window": "Effect lasts 24–72 hours after single grapefruit",
+        "alternatives": [
+          "Orange juice",
+          "Apple juice",
+          "Lemon water"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Even small amounts can inhibit CYP3A4 for 72 hours"
+      },
+      {
+        "food": "Alcohol",
+        "emoji": "🍷",
+        "compound": "Ethanol",
+        "severity": "high",
+        "mechanism": "Acute alcohol ingestion inhibits Warfarin metabolism, raising blood levels. Chronic alcohol use induces CYP2C9, reducing Warfarin levels. Both increase bleeding risk through different mechanisms and reduce platelet function.",
+        "pathway": [
+          "Ethanol ingested",
+          "Competes for CYP2C9",
+          "Altered Warfarin metabolism",
+          "Unpredictable INR",
+          "+ Platelet dysfunction",
+          "Severely elevated bleed risk"
+        ],
+        "effect": "Unpredictable INR changes — highly dangerous",
+        "timing": "Avoid entirely with Warfarin therapy",
+        "window": "Avoid completely",
+        "alternatives": [
+          "Non-alcoholic alternatives",
+          "Sparkling water"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even 1–2 drinks can have significant effects"
+      },
+      {
+        "food": "Cranberry Juice",
+        "emoji": "🫐",
+        "compound": "Flavonoids, proanthocyanidins",
+        "severity": "medium",
+        "mechanism": "Cranberry compounds inhibit CYP2C9 — the primary enzyme metabolizing Warfarin. This reduces Warfarin clearance, elevating plasma levels and increasing INR, which raises bleeding risk.",
+        "pathway": [
+          "Cranberry consumed",
+          "Flavonoids absorbed",
+          "CYP2C9 inhibited",
+          "↓ Warfarin clearance",
+          "↑ Warfarin plasma level",
+          "↑ INR",
+          "↑ Bleeding risk"
+        ],
+        "effect": "Increased INR — elevated bleeding risk",
+        "timing": "Avoid or limit to small amounts",
+        "window": "Monitor INR if consuming regularly",
+        "alternatives": [
+          "Apple juice",
+          "White grape juice",
+          "Water with lemon"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Large amounts (>250ml daily) pose significant risk"
+      }
+    ]
+  },
+  "Simvastatin": {
+    "generic": "Simvastatin (Zocor, Simvas, Simvotin)",
+    "class": "Statin / HMG-CoA Reductase Inhibitor",
+    "mechanism": "Prodrug converted to active acid form; blocks HMG-CoA reductase reducing hepatic cholesterol synthesis",
+    "halfLife": "2–3 hours",
+    "metabolism": "CYP3A4 (extensive first-pass); prodrug activated in liver",
+    "icon": "💊",
+    "interactions": [
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins (6',7'-dihydroxybergamottin)",
+        "severity": "high",
+        "mechanism": "Simvastatin is the statin MOST affected by grapefruit. Furanocoumarins are irreversible mechanism-based inhibitors of intestinal CYP3A4. Since Simvastatin undergoes extensive first-pass CYP3A4 metabolism, grapefruit blocks this, causing up to 15x higher plasma levels. This dramatic elevation causes severe myopathy and rhabdomyolysis — life-threatening muscle breakdown that releases myoglobin, causing acute kidney failure.",
+        "pathway": [
+          "Grapefruit DHB absorbed in gut",
+          "CYP3A4 irreversibly covalently inactivated",
+          "Simvastatin first-pass blocked completely",
+          "↑↑↑ Drug blood levels (up to 15x)",
+          "Massive HMG-CoA over-inhibition",
+          "Severe myopathy → rhabdomyolysis",
+          "Myoglobin released → acute kidney failure"
+        ],
+        "effect": "Up to 15x drug levels — rhabdomyolysis and kidney failure risk",
+        "timing": "AVOID completely — never consume grapefruit with Simvastatin",
+        "window": "Single grapefruit effect lasts 24–72 hours",
+        "alternatives": [
+          "Orange",
+          "Tangerine",
+          "Apple",
+          "Mango",
+          "Pomegranate"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "200ml grapefruit juice raises Simvastatin AUC by up to 1500%"
+      },
+      {
+        "food": "Red Yeast Rice",
+        "emoji": "🍚",
+        "compound": "Monacolin K (natural lovastatin equivalent)",
+        "severity": "high",
+        "mechanism": "Red yeast rice contains monacolin K, chemically identical to lovastatin — a natural HMG-CoA reductase inhibitor. Taking it with Simvastatin is equivalent to doubling the statin dose. This dramatically increases myopathy, rhabdomyolysis, and liver toxicity risk.",
+        "pathway": [
+          "Red yeast rice → monacolin K",
+          "Identical HMG-CoA inhibition to statin",
+          "Combined with Simvastatin",
+          "Double HMG-CoA reductase inhibition",
+          "Severe myopathy risk",
+          "Rhabdomyolysis",
+          "Hepatotoxicity"
+        ],
+        "effect": "Additive statin toxicity — doubled muscle and liver damage risk",
+        "timing": "Never combine red yeast rice with any statin",
+        "window": "Complete avoidance required",
+        "alternatives": [
+          "Discuss with doctor for natural cholesterol support"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Any amount of red yeast rice combined with statin is dangerous"
+      },
+      {
+        "food": "Large Fatty Meals",
+        "emoji": "🍔",
+        "compound": "Dietary saturated fats",
+        "severity": "low",
+        "mechanism": "High-fat meals may marginally enhance Simvastatin absorption through increased bile secretion, but the effect is clinically minor. More importantly, a high-saturated-fat diet counteracts the LDL-lowering goal of Simvastatin therapy, reducing its clinical benefit over time.",
+        "pathway": [
+          "High-fat meal → ↑ bile acids",
+          "Minor ↑ Simvastatin absorption",
+          "Slightly elevated drug levels",
+          "Clinically minor effect",
+          "But dietary saturated fat ↑ LDL simultaneously",
+          "Undermines cholesterol management goal"
+        ],
+        "effect": "Clinically minor absorption change; counterproductive for therapy goal",
+        "timing": "No specific timing restriction; follow low-fat heart-healthy diet",
+        "window": "Dietary pattern matters more than single meals",
+        "alternatives": [
+          "Heart-healthy diet with Simvastatin maximizes clinical benefit"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Chronic high-saturated-fat diet significantly undermines Simvastatin's benefits"
+      }
+    ]
+  },
+  "Metformin": {
+    "generic": "Metformin Hydrochloride (Glucophage)",
+    "class": "Biguanide / Antidiabetic",
+    "mechanism": "Activates AMPK, reduces hepatic gluconeogenesis, improves insulin sensitivity",
+    "halfLife": "4–8 hours",
+    "metabolism": "Not hepatically metabolized; excreted renally unchanged",
+    "icon": "🔬",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "high",
+        "mechanism": "Alcohol inhibits lactate metabolism in the liver, and Metformin already mildly increases lactate production via inhibition of complex I in the mitochondrial respiratory chain. Combined, this dramatically elevates risk of lactic acidosis — a life-threatening condition.",
+        "pathway": [
+          "Ethanol consumed",
+          "↓ Hepatic lactate clearance",
+          "Metformin → ↑ lactate production",
+          "Lactate accumulates",
+          "Blood pH drops",
+          "Lactic acidosis",
+          "Medical emergency"
+        ],
+        "effect": "Life-threatening lactic acidosis risk",
+        "timing": "Avoid alcohol entirely or consume only minimally",
+        "window": "Risk is acute — avoid on days taking Metformin",
+        "alternatives": [
+          "Non-alcoholic beer",
+          "Sparkling water with lime",
+          "Herbal mocktails"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even moderate amounts (2–3 drinks) can trigger lactic acidosis"
+      },
+      {
+        "food": "High-Carb Meals",
+        "emoji": "🍞",
+        "compound": "Simple sugars, refined carbohydrates",
+        "severity": "medium",
+        "mechanism": "Metformin works by blunting hepatic glucose output and improving insulin sensitivity. High glycemic index meals cause sharp glucose spikes that overwhelm the drug's mechanism, reducing its glycemic control effectiveness — not a chemical interaction but a functional antagonism.",
+        "pathway": [
+          "High-GI food eaten",
+          "Rapid glucose absorption",
+          "↑ Blood glucose spike",
+          "Exceeds Metformin's capacity",
+          "Suboptimal glucose control",
+          "↑ HbA1c over time"
+        ],
+        "effect": "Reduced therapeutic efficacy",
+        "timing": "Take Metformin with meals to reduce GI side effects",
+        "window": "Chronic high-carb diet undermines diabetes management",
+        "alternatives": [
+          "Whole grains",
+          "Legumes",
+          "Non-starchy vegetables",
+          "Lean proteins"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Consistent high-GI diet significantly reduces drug effectiveness"
+      },
+      {
+        "food": "Vitamin B12-rich foods",
+        "emoji": "🥩",
+        "compound": "Cyanocobalamin (Vitamin B12)",
+        "severity": "low",
+        "mechanism": "Long-term Metformin use reduces B12 absorption in the ileum by altering calcium-dependent membrane action. Eating B12-rich foods doesn't worsen this — in fact, they help compensate for Metformin-induced B12 depletion. Monitor B12 levels annually.",
+        "pathway": [
+          "Metformin chronic use",
+          "↓ Calcium-dependent B12 uptake",
+          "↓ Ileal B12 absorption",
+          "B12 deficiency risk",
+          "Neurological symptoms",
+          "Eating B12 foods partially compensates"
+        ],
+        "effect": "B12 from food partially compensates for Metformin-induced depletion",
+        "timing": "Eat B12-rich foods regularly; consider supplements",
+        "window": "Monitor B12 blood levels annually",
+        "alternatives": [
+          "More B12 foods or supplements recommended"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "More B12 from food is generally beneficial, not harmful"
+      }
+    ]
+  },
+  "Sertraline": {
+    "generic": "Sertraline Hydrochloride (Zoloft)",
+    "class": "SSRI (Selective Serotonin Reuptake Inhibitor)",
+    "mechanism": "Blocks SERT protein, preventing serotonin reuptake in presynaptic neurons",
+    "halfLife": "26 hours",
+    "metabolism": "Hepatic CYP2B6, CYP2C19, CYP2D6",
+    "icon": "🧠",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍸",
+        "compound": "Ethanol",
+        "severity": "high",
+        "mechanism": "Alcohol is a CNS depressant that enhances GABA and reduces glutamate. SSRIs can paradoxically potentiate alcohol's sedative effects and worsen depression symptoms. Alcohol also disrupts serotonin signaling — working directly against the drug's purpose.",
+        "pathway": [
+          "Ethanol → ↑ GABA activity",
+          "Sertraline → ↑ synaptic serotonin",
+          "Ethanol disrupts 5-HT signaling",
+          "Enhanced CNS depression",
+          "Impaired coordination & judgment",
+          "Worsened mood regulation"
+        ],
+        "effect": "Enhanced CNS depression; reduces antidepressant efficacy",
+        "timing": "Avoid completely during treatment",
+        "window": "Avoid throughout course of SSRI therapy",
+        "alternatives": [
+          "Herbal teas",
+          "Sparkling water",
+          "Non-alcoholic spirits"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even 1–2 drinks impair mood and cognition while on SSRIs"
+      },
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "medium",
+        "mechanism": "Sertraline is partly metabolized by CYP3A4 and CYP2C19. Grapefruit inhibits CYP3A4, which can moderately increase Sertraline plasma levels, potentially increasing side effects like nausea, dizziness, and serotonin syndrome risk.",
+        "pathway": [
+          "Grapefruit → CYP3A4 inhibition",
+          "↓ Sertraline first-pass metabolism",
+          "↑ Drug plasma concentration",
+          "↑ Serotonin in synapse",
+          "Serotonin syndrome risk",
+          "Headache, agitation, tremor"
+        ],
+        "effect": "Moderately elevated drug levels — increased side effect risk",
+        "timing": "Limit or avoid grapefruit; especially first month of therapy",
+        "window": "Effect lasts up to 72 hours per serving",
+        "alternatives": [
+          "Orange",
+          "Apple",
+          "Berries",
+          "Watermelon"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Daily grapefruit consumption poses meaningful risk"
+      },
+      {
+        "food": "St. John's Wort",
+        "emoji": "🌿",
+        "compound": "Hyperforin, hypericin",
+        "severity": "high",
+        "mechanism": "St. John's Wort is a natural SSRI itself — inducing serotonin reuptake inhibition. Combined with Sertraline, the result is dangerously high synaptic serotonin levels: serotonin syndrome. Hyperforin also induces CYP3A4, creating unpredictable Sertraline metabolism.",
+        "pathway": [
+          "SJW → serotonin reuptake inhibition",
+          "Sertraline does same",
+          "Combined 5-HT ↑↑ in synapse",
+          "5-HT1A/2A receptor overstimulation",
+          "Serotonin syndrome",
+          "Hyperthermia, seizures, death possible"
+        ],
+        "effect": "Life-threatening serotonin syndrome",
+        "timing": "NEVER combine — absolute contraindication",
+        "window": "Wait 2+ weeks after stopping either before starting the other",
+        "alternatives": [
+          "Chamomile tea",
+          "Lavender (aromatherapy)",
+          "Valerian (consult doctor)"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Any amount can trigger serotonin syndrome — absolute avoidance"
+      }
+    ]
+  },
+  "Lisinopril": {
+    "generic": "Lisinopril (Zestril, Prinivil, Listril)",
+    "class": "ACE Inhibitor / Antihypertensive",
+    "mechanism": "Inhibits angiotensin-converting enzyme, reducing angiotensin II and aldosterone secretion",
+    "halfLife": "12 hours",
+    "metabolism": "Not metabolized; excreted unchanged in urine",
+    "icon": "❤️",
+    "interactions": [
+      {
+        "food": "High-Potassium Foods",
+        "emoji": "🍌",
+        "compound": "Potassium (K+)",
+        "severity": "high",
+        "mechanism": "ACE inhibitors reduce aldosterone, which normally promotes renal potassium excretion. With Lisinopril already reducing K+ excretion, eating large amounts of potassium-rich foods (bananas, potatoes, oranges, coconut water) causes potassium accumulation (hyperkalemia) that can cause fatal cardiac arrhythmias.",
+        "pathway": [
+          "Lisinopril → ↓ Aldosterone",
+          "↓ Renal K+ excretion",
+          "K+ retained in blood",
+          "High-K+ foods add more K+",
+          "Hyperkalemia (K+ >5.5 mEq/L)",
+          "Cardiac membrane depolarization",
+          "Fatal arrhythmia / cardiac arrest"
+        ],
+        "effect": "Dangerous hyperkalemia — risk of cardiac arrest",
+        "timing": "Limit high-potassium foods; monitor blood K+ levels",
+        "window": "Chronic monitoring required",
+        "alternatives": [
+          "White rice",
+          "Pasta",
+          "Apples",
+          "Berries"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Large daily K+ intake (bananas + supplements together) is dangerous"
+      },
+      {
+        "food": "Salt Substitutes",
+        "emoji": "🧂",
+        "compound": "Potassium chloride (KCl)",
+        "severity": "high",
+        "mechanism": "Salt substitutes replace sodium chloride with potassium chloride. This delivers a large potassium load directly. Combined with ACE inhibitor's reduction in aldosterone and renal K+ excretion, this leads to rapid hyperkalemia and potentially fatal cardiac arrhythmia.",
+        "pathway": [
+          "KCl salt substitute used",
+          "High K+ intake",
+          "ACE inhibitor reduces renal K+ excretion",
+          "K+ accumulates rapidly in serum",
+          "Hyperkalemia",
+          "Life-threatening arrhythmia"
+        ],
+        "effect": "Severe hyperkalemia — potentially life-threatening",
+        "timing": "Avoid all potassium-based salt substitutes entirely",
+        "window": "Complete avoidance required",
+        "alternatives": [
+          "Herbs (rosemary, thyme)",
+          "Lemon juice",
+          "Vinegar",
+          "Small amounts regular salt"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Any significant use of K+ salt substitutes is dangerous with ACE inhibitors"
+      },
+      {
+        "food": "Licorice",
+        "emoji": "🍬",
+        "compound": "Glycyrrhizin",
+        "severity": "medium",
+        "mechanism": "Glycyrrhizin in real licorice inhibits 11β-HSD2 enzyme, causing cortisol to act like aldosterone — promoting sodium retention and potassium loss. This directly opposes Lisinopril's blood pressure lowering mechanism, elevating blood pressure and reducing drug efficacy.",
+        "pathway": [
+          "Glycyrrhizin inhibits 11β-HSD2",
+          "Cortisol activates mineralocorticoid receptors",
+          "↑ Sodium retention → ↑ BP",
+          "Counteracts ACE inhibitor effect",
+          "Blood pressure rises",
+          "Hypertension poorly controlled"
+        ],
+        "effect": "Reduced blood pressure control",
+        "timing": "Avoid real licorice (licorice root extract); artificial licorice flavor is safe",
+        "window": "Effect builds over days with regular consumption",
+        "alternatives": [
+          "Anise-flavored candy",
+          "Fennel tea",
+          "Artificial licorice flavor"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "50g+ real licorice daily for 2+ weeks significantly affects blood pressure"
+      }
+    ]
+  },
+  "Phenelzine": {
+    "generic": "Phenelzine Sulfate (Nardil)",
+    "class": "MAOI (Monoamine Oxidase Inhibitor)",
+    "mechanism": "Irreversibly inhibits MAO-A and MAO-B enzymes; prevents breakdown of serotonin, dopamine, norepinephrine, tyramine",
+    "halfLife": "11–12 hours",
+    "metabolism": "Hepatic acetylation; MAO-A/B irreversible binding",
+    "icon": "⚡",
+    "interactions": [
+      {
+        "food": "Aged Cheese",
+        "emoji": "🧀",
+        "compound": "Tyramine",
+        "severity": "high",
+        "mechanism": "MAO-A in the gut and liver normally breaks down dietary tyramine. Phenelzine irreversibly inhibits MAO, so tyramine from aged cheese enters systemic circulation intact, causing massive norepinephrine release and severe, potentially fatal hypertensive crisis (BP may exceed 200/130 mmHg).",
+        "pathway": [
+          "Tyramine in cheese eaten",
+          "MAO normally degrades it",
+          "Phenelzine blocks MAO irreversibly",
+          "Tyramine enters blood intact",
+          "Displaces NE from nerve terminals",
+          "Massive NE surge",
+          "Hypertensive crisis — stroke risk"
+        ],
+        "effect": "Hypertensive crisis — potentially fatal (BP >200 mmHg)",
+        "timing": "ABSOLUTE CONTRAINDICATION — completely forbidden",
+        "window": "Dietary restrictions persist for 2 weeks after stopping MAOI",
+        "alternatives": [
+          "Fresh mozzarella",
+          "Cream cheese",
+          "Cottage cheese",
+          "Ricotta"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even 10mg of tyramine can trigger crisis. Aged cheddar has 500–1500mg/kg"
+      },
+      {
+        "food": "Cured/Processed Meats",
+        "emoji": "🥩",
+        "compound": "Tyramine, histamine",
+        "severity": "high",
+        "mechanism": "Fermentation and aging in cured meats produces tyramine via bacterial decarboxylation of tyrosine. With MAOI blocking tyramine metabolism, these meats trigger the same hypertensive crisis as aged cheese. Pepperoni, salami, and sausage are especially high-tyramine.",
+        "pathway": [
+          "Bacteria decarboxylate tyrosine",
+          "Tyramine accumulates in meat",
+          "Consumed → bypasses MAO",
+          "Systemic tyramine surge",
+          "NE release from neurons",
+          "Hypertensive emergency"
+        ],
+        "effect": "Hypertensive crisis — same as aged cheese",
+        "timing": "Strict avoidance required",
+        "window": "Full dietary restrictions for 2 weeks post-MAOI",
+        "alternatives": [
+          "Fresh chicken",
+          "Fresh fish",
+          "Fresh beef (cooked same day)",
+          "Eggs"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Salami/pepperoni can contain 500–4000mg/kg tyramine — all dangerous"
+      },
+      {
+        "food": "Fermented Foods",
+        "emoji": "🫙",
+        "compound": "Tyramine, dopamine precursors",
+        "severity": "high",
+        "mechanism": "Soy sauce, miso, sauerkraut, kimchi, and fermented tofu undergo microbial fermentation producing large amounts of tyramine. Traditional soy sauce can contain up to 4000mg/kg tyramine — extremely dangerous with MAOI therapy.",
+        "pathway": [
+          "Fermentation produces tyramine",
+          "Large quantities in soy sauce/miso",
+          "MAO blocked by Phenelzine",
+          "Tyramine enters bloodstream",
+          "NE surge → crisis"
+        ],
+        "effect": "Hypertensive crisis — avoid all fermented condiments",
+        "timing": "Strict avoidance — read all food labels carefully",
+        "window": "2-week dietary restriction post-MAOI discontinuation",
+        "alternatives": [
+          "Fresh herbs for flavor",
+          "Lemon juice",
+          "Apple cider vinegar (fresh)",
+          "Fresh garlic/ginger"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "1 tablespoon of soy sauce can contain dangerous tyramine levels"
+      },
+      {
+        "food": "Red Wine & Beer",
+        "emoji": "🍷",
+        "compound": "Tyramine, ethanol",
+        "severity": "high",
+        "mechanism": "Red wine (especially Chianti) and tap/draft beer contain significant tyramine from yeast fermentation. Combined with MAOI, this produces acute hypertensive crisis. Ethanol also inhibits MAO independently, compounding the tyramine accumulation risk.",
+        "pathway": [
+          "Wine/beer consumed",
+          "Tyramine absorbed from gut",
+          "MAO blocked — no degradation",
+          "+ Ethanol inhibits MAO further",
+          "Tyramine floods bloodstream",
+          "NE crisis",
+          "Severe hypertensive emergency"
+        ],
+        "effect": "Severe hypertensive crisis — can cause stroke or death",
+        "timing": "All alcohol with tyramine content must be avoided",
+        "window": "Bottled beer may be safer — tap beer highest risk",
+        "alternatives": [
+          "Water",
+          "Herbal tea",
+          "Fresh fruit juice",
+          "Sparkling water"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "A single glass of Chianti can trigger hypertensive crisis"
+      }
+    ]
+  },
+  "Ciprofloxacin": {
+    "generic": "Ciprofloxacin Hydrochloride (Cipro)",
+    "class": "Fluoroquinolone Antibiotic",
+    "mechanism": "Inhibits bacterial DNA gyrase and topoisomerase IV, preventing DNA replication",
+    "halfLife": "3–5 hours",
+    "metabolism": "Partially hepatic; 40–50% excreted unchanged in urine",
+    "icon": "🦠",
+    "interactions": [
+      {
+        "food": "Dairy Products",
+        "emoji": "🥛",
+        "compound": "Calcium ions (Ca²⁺)",
+        "severity": "high",
+        "mechanism": "Ciprofloxacin forms insoluble chelation complexes with divalent cations (Ca²⁺, Mg²⁺, Fe²⁺, Zn²⁺). Dairy calcium binds directly to the drug's 3-carboxyl and 4-oxo groups in the gut lumen, forming a chelate that cannot be absorbed through intestinal walls — reducing bioavailability by up to 50%.",
+        "pathway": [
+          "Dairy consumed",
+          "Ca²⁺ ions released in gut",
+          "Chelate with Ciprofloxacin",
+          "C-3/C-4 chelation complex",
+          "Insoluble precipitate forms",
+          "Cannot cross gut wall",
+          "Drug excreted unabsorbed",
+          "Infection not treated"
+        ],
+        "effect": "Up to 50% reduction in drug absorption — antibiotic failure",
+        "timing": "Take Ciprofloxacin 2 hours BEFORE or 6 hours AFTER dairy",
+        "window": "Strict separation required for every dose",
+        "alternatives": [
+          "Water (best)",
+          "Apple juice",
+          "Non-mineral water"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even a small glass of milk (200ml) significantly reduces absorption"
+      },
+      {
+        "food": "Calcium-fortified Foods",
+        "emoji": "🥣",
+        "compound": "Calcium carbonate, calcium phosphate",
+        "severity": "high",
+        "mechanism": "Fortified foods (orange juice with calcium, fortified cereals, plant milks with added Ca²⁺) present the same chelation problem as dairy. Calcium ions in any form bind to Ciprofloxacin and prevent absorption. This is often overlooked by patients who believe they're avoiding dairy.",
+        "pathway": [
+          "Fortified food eaten",
+          "Added calcium ions released",
+          "Form chelate with antibiotic",
+          "Reduced drug absorption",
+          "Subtherapeutic blood levels",
+          "Antibiotic resistance risk"
+        ],
+        "effect": "Significantly reduced antibiotic effectiveness",
+        "timing": "Separate dose by 2 hours before or 6 hours after",
+        "window": "Check all food labels for added calcium",
+        "alternatives": [
+          "Plain water",
+          "Regular (non-fortified) apple/grape juice"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Any calcium-fortified food within the dosing window is problematic"
+      },
+      {
+        "food": "Caffeine",
+        "emoji": "☕",
+        "compound": "Caffeine (1,3,7-trimethylxanthine)",
+        "severity": "medium",
+        "mechanism": "Ciprofloxacin inhibits CYP1A2, the primary enzyme metabolizing caffeine. This dramatically extends caffeine's half-life from 3–5 hours to 10+ hours. The result is caffeine toxicity symptoms: heart palpitations, severe insomnia, anxiety, tremors.",
+        "pathway": [
+          "Caffeine consumed",
+          "Normally metabolized by CYP1A2",
+          "Ciprofloxacin inhibits CYP1A2",
+          "Caffeine half-life extends 3x",
+          "Caffeine accumulates in blood",
+          "Overstimulation of adenosine receptors",
+          "Palpitations, anxiety, insomnia"
+        ],
+        "effect": "3–5x longer caffeine effect — toxicity symptoms",
+        "timing": "Minimize caffeine intake during Ciprofloxacin course",
+        "window": "Effect lasts entire course of antibiotic (usually 7–14 days)",
+        "alternatives": [
+          "Decaf coffee",
+          "Herbal tea (non-caffeinated)",
+          "Chamomile",
+          "Rooibos"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "1 cup of coffee may feel like 3–4 cups due to accumulation"
+      }
+    ]
+  },
+  "Paracetamol": {
+    "generic": "Paracetamol / Acetaminophen (Calpol, Tylenol)",
+    "class": "Analgesic / Antipyretic",
+    "mechanism": "Inhibits prostaglandin synthesis in CNS; reduces fever via hypothalamic heat-regulating center",
+    "halfLife": "1–4 hours",
+    "metabolism": "Hepatic — CYP2E1, glucuronidation, sulfation",
+    "icon": "🌡️",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "high",
+        "mechanism": "Alcohol induces CYP2E1 enzyme, which converts Paracetamol into NAPQI (N-acetyl-p-benzoquinone imine) — a highly toxic metabolite. Normally glutathione neutralizes NAPQI, but alcohol depletes glutathione stores. This leads to accumulation of NAPQI causing severe, potentially fatal hepatotoxicity (liver damage).",
+        "pathway": [
+          "Alcohol induces CYP2E1",
+          "Paracetamol metabolized to NAPQI",
+          "Alcohol depletes glutathione stores",
+          "NAPQI cannot be neutralized",
+          "NAPQI binds liver cell proteins",
+          "Hepatocyte necrosis",
+          "Acute liver failure"
+        ],
+        "effect": "Severe liver damage — potentially fatal hepatotoxicity",
+        "timing": "Avoid alcohol completely while taking Paracetamol",
+        "window": "Risk elevated for 24–48 hours after last drink",
+        "alternatives": [
+          "Water",
+          "Herbal tea",
+          "Fruit juice",
+          "Sparkling water"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even 3 alcoholic drinks/day makes Paracetamol hepatotoxic at normal doses"
+      },
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "low",
+        "mechanism": "Grapefruit mildly affects Paracetamol absorption via CYP3A4 pathway. The interaction is not clinically significant at normal doses but may slightly alter peak plasma concentration. Not a major concern for occasional use.",
+        "pathway": [
+          "Grapefruit → mild CYP3A4 inhibition",
+          "Minor effect on Paracetamol metabolism",
+          "Slightly altered absorption",
+          "Clinically not significant at normal doses"
+        ],
+        "effect": "Minor — not clinically significant at therapeutic doses",
+        "timing": "No specific restriction needed",
+        "window": "Not a concern for normal use",
+        "alternatives": [
+          "All other fruits are safe"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Very large amounts of grapefruit needed to produce minor effect"
+      },
+      {
+        "food": "High-Carb / Pectin Foods",
+        "emoji": "🍏",
+        "compound": "Dietary pectin (soluble fiber)",
+        "severity": "low",
+        "mechanism": "Pectin-rich foods (apples, citrus pith) may slightly delay Paracetamol absorption by slowing gastric emptying. This delays onset of pain relief but does not reduce overall efficacy. Taking Paracetamol on empty stomach gives faster relief.",
+        "pathway": [
+          "Pectin slows gastric emptying",
+          "Paracetamol absorption delayed",
+          "Slower rise to peak plasma level",
+          "Pain relief onset delayed 15–30 min",
+          "Total absorption unchanged"
+        ],
+        "effect": "Delayed onset of pain relief — not dangerous",
+        "timing": "Take on empty stomach for fastest effect; food reduces GI irritation",
+        "window": "Effect is transient — only affects timing, not efficacy",
+        "alternatives": [
+          "Take with water on empty stomach for fastest effect"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Large fiber meals delay absorption; clinically minor"
+      }
+    ]
+  },
+  "Ibuprofen": {
+    "generic": "Ibuprofen (Brufen, Advil, Nurofen)",
+    "class": "NSAID (Non-Steroidal Anti-Inflammatory Drug)",
+    "mechanism": "Non-selective COX-1 and COX-2 inhibitor; reduces prostaglandin synthesis",
+    "halfLife": "2 hours",
+    "metabolism": "Hepatic CYP2C9; renal excretion",
+    "icon": "💊",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍷",
+        "compound": "Ethanol",
+        "severity": "high",
+        "mechanism": "Ibuprofen inhibits COX-1, which is protective of the gastric mucosa. Alcohol independently damages the gastric lining by dissolving the mucus layer. Combined, they cause severe gastric irritation, ulcers, and GI bleeding. Risk of serious upper GI hemorrhage is significantly elevated.",
+        "pathway": [
+          "Ibuprofen inhibits COX-1",
+          "↓ Gastroprotective prostaglandins",
+          "Alcohol dissolves gastric mucus",
+          "Combined gastric mucosal damage",
+          "Ulcer formation",
+          "GI bleeding / hemorrhage"
+        ],
+        "effect": "Severe GI bleeding and gastric ulcer risk",
+        "timing": "Avoid alcohol during Ibuprofen use",
+        "window": "Avoid throughout course of treatment",
+        "alternatives": [
+          "Water",
+          "Milk (can reduce GI irritation)",
+          "Non-alcoholic drinks"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even 1–2 drinks significantly increases GI bleeding risk"
+      },
+      {
+        "food": "Caffeine",
+        "emoji": "☕",
+        "compound": "Caffeine",
+        "severity": "low",
+        "mechanism": "Caffeine has mild analgesic-enhancing properties and can actually improve Ibuprofen's pain-relieving effect. However, caffeine also mildly increases gastric acid secretion which can worsen GI irritation already caused by NSAIDs.",
+        "pathway": [
+          "Caffeine → mild CNS stimulation",
+          "↑ Analgesic effect of Ibuprofen",
+          "Caffeine ↑ gastric acid secretion",
+          "Worsened gastric irritation",
+          "GI discomfort increased"
+        ],
+        "effect": "Mild GI irritation increase; analgesic effect slightly enhanced",
+        "timing": "Limit caffeine; take Ibuprofen with food to reduce GI effects",
+        "window": "Take Ibuprofen with food or milk always",
+        "alternatives": [
+          "Decaf coffee",
+          "Herbal tea"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Moderate caffeine (1–2 cups) may enhance pain relief with minimal added risk"
+      },
+      {
+        "food": "Salty / High-Sodium Foods",
+        "emoji": "🧂",
+        "compound": "Sodium chloride",
+        "severity": "medium",
+        "mechanism": "Ibuprofen reduces renal prostaglandins, impairing sodium excretion and causing fluid retention. High-sodium diet worsens this effect significantly, elevating blood pressure and risk of edema. In heart or kidney patients this can be dangerous.",
+        "pathway": [
+          "Ibuprofen ↓ renal prostaglandins",
+          "↓ Renal sodium excretion",
+          "High-Na diet adds sodium load",
+          "Fluid retention and edema",
+          "Elevated blood pressure",
+          "Cardiac/renal strain"
+        ],
+        "effect": "Worsened fluid retention and elevated blood pressure",
+        "timing": "Follow low-sodium diet during prolonged Ibuprofen use",
+        "window": "Effect cumulative with chronic NSAID use",
+        "alternatives": [
+          "Low-sodium alternatives",
+          "Herbs for seasoning",
+          "Potassium-based seasoning (check with doctor)"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Chronic high-sodium diet during regular NSAID use poses meaningful cardiovascular risk"
+      }
+    ]
+  },
+  "Aspirin": {
+    "generic": "Aspirin / Acetylsalicylic Acid (Disprin, Ecosprin)",
+    "class": "NSAID / Antiplatelet / Salicylate",
+    "mechanism": "Irreversibly acetylates COX-1 and COX-2; inhibits platelet thromboxane A2 synthesis",
+    "halfLife": "15–20 min (aspirin); 2–3 hours (salicylate)",
+    "metabolism": "Hydrolyzed to salicylate; hepatic conjugation",
+    "icon": "❤️",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "high",
+        "mechanism": "Aspirin inhibits COX-1 reducing gastroprotective prostaglandins. Alcohol damages gastric mucosa directly. Combined, they dramatically increase risk of GI bleeding. Aspirin also inhibits platelet aggregation, so any GI bleed is harder to stop. Risk of serious hemorrhage is high.",
+        "pathway": [
+          "Aspirin blocks COX-1",
+          "↓ Gastroprotective prostaglandins",
+          "Alcohol erodes gastric mucosa",
+          "Combined mucosal damage",
+          "Gastric ulcer / bleed",
+          "Platelet inhibition → bleed persists",
+          "Serious hemorrhage"
+        ],
+        "effect": "Greatly increased GI bleeding risk — potentially life-threatening",
+        "timing": "Avoid alcohol with Aspirin",
+        "window": "Aspirin's platelet effects last 7–10 days",
+        "alternatives": [
+          "Water",
+          "Herbal tea",
+          "Fruit juice"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even moderate drinking with Aspirin significantly elevates bleed risk"
+      },
+      {
+        "food": "Vitamin C (acidic foods)",
+        "emoji": "🍋",
+        "compound": "Ascorbic acid",
+        "severity": "low",
+        "mechanism": "High-dose Vitamin C (ascorbic acid) slightly increases urinary salicylate reabsorption by acidifying urine, mildly raising aspirin blood levels. At normal dietary levels this is not clinically significant. Only high-dose Vitamin C supplements pose a very minor interaction.",
+        "pathway": [
+          "High-dose Vit C → urine acidification",
+          "Salicylate reabsorption ↑ in kidneys",
+          "Slightly ↑ Aspirin blood levels",
+          "Minor effect on COX inhibition",
+          "Clinically insignificant at dietary doses"
+        ],
+        "effect": "Very minor increase in aspirin levels — not clinically significant",
+        "timing": "No restriction for dietary Vitamin C; avoid megadose supplements",
+        "window": "Not a concern for most patients",
+        "alternatives": [
+          "Normal dietary Vitamin C is fine"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Only pharmacological doses of Vitamin C (>2g/day) matter"
+      },
+      {
+        "food": "Omega-3 / Fish Oils",
+        "emoji": "🐟",
+        "compound": "EPA, DHA (polyunsaturated fatty acids)",
+        "severity": "medium",
+        "mechanism": "Both Aspirin and omega-3 fatty acids inhibit platelet aggregation via different pathways. Aspirin blocks thromboxane A2; omega-3s reduce platelet TXA2 synthesis and increase prostacyclin. Combined, platelet function is significantly reduced, increasing bleeding time.",
+        "pathway": [
+          "Aspirin → irreversible COX-1 acetylation",
+          "↓ Thromboxane A2 synthesis",
+          "Omega-3 also ↓ platelet TXA2",
+          "Both ↑ prostacyclin effects",
+          "Additive platelet inhibition",
+          "Prolonged bleeding time",
+          "Bruising / bleeding risk elevated"
+        ],
+        "effect": "Additive antiplatelet effect — increased bleeding tendency",
+        "timing": "Inform doctor if taking both; monitor for bruising",
+        "window": "Effect is cumulative with regular use of both",
+        "alternatives": [
+          "Flaxseed in small amounts",
+          "Reduce omega-3 supplement dose; consult doctor"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "High-dose omega-3 supplements (>3g/day) with Aspirin pose meaningful risk"
+      }
+    ]
+  },
+  "Amoxicillin": {
+    "generic": "Amoxicillin Trihydrate (Amoxil, Trimox)",
+    "class": "Penicillin Antibiotic (Beta-lactam)",
+    "mechanism": "Inhibits bacterial cell wall synthesis by binding penicillin-binding proteins (PBPs)",
+    "halfLife": "1–1.5 hours",
+    "metabolism": "Minimal hepatic; 60–80% excreted unchanged in urine",
+    "icon": "🦠",
+    "interactions": [
+      {
+        "food": "High-Fat Meals",
+        "emoji": "🍔",
+        "compound": "Dietary fats",
+        "severity": "low",
+        "mechanism": "Amoxicillin absorption is generally not significantly affected by food. High-fat meals may slightly reduce peak concentration but the total drug absorbed remains similar. Unlike some antibiotics, Amoxicillin can be taken with or without food.",
+        "pathway": [
+          "Food slows gastric emptying",
+          "Minor delay in Amoxicillin absorption",
+          "Slightly reduced Cmax",
+          "Total bioavailability unchanged",
+          "Clinically not significant"
+        ],
+        "effect": "Minor delay in absorption — not clinically significant",
+        "timing": "Can be taken with or without food",
+        "window": "Food actually helps reduce nausea side effects",
+        "alternatives": [
+          "Take with food to reduce stomach upset"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Food effect on Amoxicillin is clinically negligible"
+      },
+      {
+        "food": "Acidic Foods & Drinks",
+        "emoji": "🍊",
+        "compound": "Citric acid, ascorbic acid",
+        "severity": "medium",
+        "mechanism": "Highly acidic beverages (cola, citrus juices, vinegar) can degrade Amoxicillin in the gut before absorption, as the drug is acid-labile at very low pH. This reduces effective drug concentration and may compromise treatment of the infection.",
+        "pathway": [
+          "Acidic drink consumed with Amoxicillin",
+          "Low gastric pH degrades drug",
+          "Amoxicillin hydrolysis accelerated",
+          "Reduced intact drug available",
+          "Lower blood drug concentration",
+          "Potential treatment failure"
+        ],
+        "effect": "Reduced drug efficacy due to acid degradation",
+        "timing": "Take with water; avoid highly acidic drinks within 1 hour of dose",
+        "window": "Avoid acidic drinks at time of each dose",
+        "alternatives": [
+          "Plain water",
+          "Milk",
+          "Non-acidic fruit drinks"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Cola/citrus juice taken simultaneously with dose causes meaningful degradation"
+      },
+      {
+        "food": "Probiotic Foods",
+        "emoji": "🥛",
+        "compound": "Live bacterial cultures (Lactobacillus, Bifidobacterium)",
+        "severity": "low",
+        "mechanism": "Amoxicillin kills both harmful and beneficial gut bacteria. Probiotic foods (yogurt, kefir) help replenish gut flora and reduce antibiotic-associated diarrhea. However, probiotic bacteria should be separated from dose by 2 hours to avoid being killed by the drug.",
+        "pathway": [
+          "Amoxicillin → kills gut bacteria broadly",
+          "Gut dysbiosis develops",
+          "Antibiotic-associated diarrhea",
+          "Probiotics replenish good bacteria",
+          "Reduce GI side effects",
+          "Must be spaced from antibiotic dose"
+        ],
+        "effect": "Beneficial if timed correctly — reduces GI side effects",
+        "timing": "Take probiotics 2 hours before or after Amoxicillin",
+        "window": "Continue probiotics for 2 weeks after antibiotic course",
+        "alternatives": [
+          "Yogurt with live cultures",
+          "Kefir",
+          "Probiotic supplements"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Probiotics are beneficial — just separate from antibiotic dose timing"
+      }
+    ]
+  },
+  "Azithromycin": {
+    "generic": "Azithromycin (Zithromax, Azee, Z-Pack)",
+    "class": "Macrolide Antibiotic",
+    "mechanism": "Binds 50S ribosomal subunit, blocking bacterial protein synthesis (translocation step)",
+    "halfLife": "68 hours (very long tissue half-life)",
+    "metabolism": "Hepatic demethylation; biliary excretion; mild CYP3A4 inhibitor",
+    "icon": "💉",
+    "interactions": [
+      {
+        "food": "Antacids (Aluminum/Magnesium)",
+        "emoji": "🫙",
+        "compound": "Al³⁺ / Mg²⁺ ions from antacid foods/supplements",
+        "severity": "medium",
+        "mechanism": "Antacids containing aluminum and magnesium form chelation complexes with Azithromycin, reducing its peak plasma concentration (Cmax) by up to 24%. While total absorption (AUC) may be similar, reduced peak levels can affect tissue drug distribution.",
+        "pathway": [
+          "Antacid consumed with Azithromycin",
+          "Al³⁺/Mg²⁺ chelate with drug",
+          "Reduced peak drug absorption",
+          "Lower tissue drug concentrations",
+          "Potential reduced antibacterial effect",
+          "Especially problematic for lung infections"
+        ],
+        "effect": "Reduced peak drug levels — may affect efficacy",
+        "timing": "Take Azithromycin 1 hour before or 2 hours after antacids",
+        "window": "Single-dose separation is usually sufficient",
+        "alternatives": [
+          "Separate antacid use by 2 hours",
+          "H2 blockers less problematic"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Any significant antacid dose taken simultaneously reduces absorption"
+      },
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "low",
+        "mechanism": "Azithromycin is a mild CYP3A4 inhibitor itself, and grapefruit also inhibits CYP3A4. The combined inhibition is generally not clinically significant for Azithromycin specifically, as it's not heavily dependent on CYP3A4 for its own metabolism.",
+        "pathway": [
+          "Grapefruit → CYP3A4 inhibition",
+          "Azithromycin also mildly inhibits CYP3A4",
+          "Minor combined effect",
+          "Azithromycin not significantly affected",
+          "Low clinical significance"
+        ],
+        "effect": "Minimal clinical significance",
+        "timing": "No specific restriction needed for grapefruit",
+        "window": "Not a significant concern",
+        "alternatives": [
+          "All citrus is generally fine with Azithromycin"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Not clinically meaningful"
+      },
+      {
+        "food": "Alcohol",
+        "emoji": "🍷",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Alcohol does not directly interact with Azithromycin pharmacokinetically. However, alcohol impairs immune system function, reducing the body's ability to fight infection. It also worsens GI side effects (nausea, diarrhea) that are already common with this antibiotic, and dehydration from alcohol reduces drug distribution.",
+        "pathway": [
+          "Alcohol → immunosuppression",
+          "Body less able to fight infection",
+          "Antibiotic must work harder",
+          "Alcohol worsens GI side effects",
+          "Nausea/vomiting may reduce dose completion",
+          "Risk of treatment failure"
+        ],
+        "effect": "Reduced immune response; worsened side effects",
+        "timing": "Avoid alcohol during antibiotic course",
+        "window": "Avoid for entire treatment duration (5 days typical)",
+        "alternatives": [
+          "Water",
+          "Electrolyte drinks",
+          "Herbal tea"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Even moderate drinking impairs immune recovery during infection treatment"
+      }
+    ]
+  },
+  "Doxycycline": {
+    "generic": "Doxycycline Hyclate / Monohydrate (Vibramycin, Doxin)",
+    "class": "Tetracycline Antibiotic",
+    "mechanism": "Binds 30S ribosomal subunit, blocking aminoacyl-tRNA binding and bacterial protein synthesis",
+    "halfLife": "16–22 hours",
+    "metabolism": "Minimal hepatic; partial biliary/fecal elimination",
+    "icon": "🔬",
+    "interactions": [
+      {
+        "food": "Dairy Products",
+        "emoji": "🥛",
+        "compound": "Calcium ions (Ca²⁺)",
+        "severity": "high",
+        "mechanism": "Calcium in dairy forms stable chelation complexes with Doxycycline at its beta-diketone moiety. This insoluble complex cannot be absorbed through intestinal walls, reducing drug bioavailability by up to 30%. Unlike older tetracyclines, Doxycycline is less affected but dairy still meaningfully reduces efficacy.",
+        "pathway": [
+          "Dairy calcium released in gut",
+          "Ca²⁺ chelates Doxycycline",
+          "Insoluble complex formed",
+          "Cannot cross gut epithelium",
+          "Reduced drug absorption",
+          "Sub-therapeutic blood levels",
+          "Antibiotic treatment failure"
+        ],
+        "effect": "Up to 30% reduction in drug absorption",
+        "timing": "Take 1 hour before or 2 hours after dairy",
+        "window": "Separate every dose from dairy",
+        "alternatives": [
+          "Plain water",
+          "Apple juice",
+          "Non-calcium fortified drinks"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "A single glass of milk can reduce absorption by 20–30%"
+      },
+      {
+        "food": "Iron-rich Foods",
+        "emoji": "🥩",
+        "compound": "Ferrous ions (Fe²⁺, Fe³⁺)",
+        "severity": "high",
+        "mechanism": "Iron ions form tight chelation complexes with Doxycycline, drastically reducing absorption. Red meat, iron-fortified cereals, and iron supplements all provide ferrous/ferric ions that bind the antibiotic in the gut lumen and prevent it from entering the bloodstream.",
+        "pathway": [
+          "Iron-rich food consumed",
+          "Fe²⁺/Fe³⁺ ions chelate Doxycycline",
+          "Stable insoluble chelate forms",
+          "Drug not absorbed from gut",
+          "Sub-therapeutic plasma levels",
+          "Bacteria not adequately suppressed",
+          "Treatment failure / resistance"
+        ],
+        "effect": "Severely reduced antibiotic absorption — treatment failure risk",
+        "timing": "Take Doxycycline 2 hours before or 3 hours after iron-rich meals",
+        "window": "Strict separation at every dose",
+        "alternatives": [
+          "Low-iron meals around dose times (rice, bread, vegetables, eggs)"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Iron supplements reduce absorption by up to 80%; dietary iron by 20–40%"
+      },
+      {
+        "food": "Antacids / Milk of Magnesia",
+        "emoji": "🫙",
+        "compound": "Magnesium, aluminum, calcium hydroxide",
+        "severity": "high",
+        "mechanism": "Antacid cations (Mg²⁺, Al³⁺, Ca²⁺) all form chelation complexes with Doxycycline. Milk of magnesia, calcium carbonate tablets, and aluminum-containing antacids should never be taken with tetracyclines. This interaction reduces absorption by 50–80%.",
+        "pathway": [
+          "Antacid provides polyvalent cations",
+          "Doxycycline chelated in gut",
+          "Precipitate cannot be absorbed",
+          "Dramatically reduced bioavailability",
+          "Failed infection treatment",
+          "Possible antibiotic resistance development"
+        ],
+        "effect": "50–80% reduction in drug absorption — severe treatment failure risk",
+        "timing": "Never take together — separate by at least 2–3 hours",
+        "window": "Strict timing at every dose",
+        "alternatives": [
+          "Avoid antacids during Doxycycline course if possible; use H2 blockers instead"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Any antacid dose taken with Doxycycline is dangerous to treatment success"
+      }
+    ]
+  },
+  "Atorvastatin": {
+    "generic": "Atorvastatin Calcium (Lipitor, Atorva)",
+    "class": "Statin / HMG-CoA Reductase Inhibitor",
+    "mechanism": "Competitively inhibits HMG-CoA reductase, reducing hepatic cholesterol and LDL synthesis",
+    "halfLife": "14 hours (active metabolites: 20–30 hours)",
+    "metabolism": "CYP3A4 (major); hepatic first-pass",
+    "icon": "🫀",
+    "interactions": [
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins (6',7'-dihydroxybergamottin)",
+        "severity": "high",
+        "mechanism": "Furanocoumarins in grapefruit irreversibly inhibit intestinal CYP3A4, the primary enzyme metabolizing Atorvastatin. This increases Atorvastatin bioavailability by 83% (approximately doubles blood levels). Elevated statin concentrations cause severe myopathy and rhabdomyolysis — dangerous muscle breakdown that can lead to kidney failure.",
+        "pathway": [
+          "Grapefruit furanocoumarins absorbed",
+          "CYP3A4 irreversibly inactivated",
+          "Atorvastatin first-pass blocked",
+          "↑ Drug bioavailability by ~83%",
+          "HMG-CoA over-inhibition",
+          "Myopathy / rhabdomyolysis",
+          "Acute kidney injury from myoglobin"
+        ],
+        "effect": "~2x increase in drug levels — severe muscle damage and kidney failure risk",
+        "timing": "Avoid grapefruit entirely during Atorvastatin therapy",
+        "window": "Single grapefruit effect lasts 24–72 hours",
+        "alternatives": [
+          "Orange",
+          "Tangerine",
+          "Apple",
+          "Pomegranate",
+          "Mango"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "200ml grapefruit juice increases Atorvastatin AUC by 83%"
+      },
+      {
+        "food": "Large Quantity of Oats / Fiber",
+        "emoji": "🌾",
+        "compound": "Beta-glucan, soluble fiber",
+        "severity": "low",
+        "mechanism": "High dietary fiber slightly reduces Atorvastatin absorption by binding to the drug in the gut. However, fiber independently lowers LDL cholesterol, complementing the drug's action. The net effect is generally neutral to beneficial — just take Atorvastatin 1 hour before a high-fiber meal.",
+        "pathway": [
+          "Dietary fiber in gut",
+          "Minor binding with Atorvastatin",
+          "Slightly reduced absorption",
+          "But fiber lowers LDL independently",
+          "Net effect: neutral to positive"
+        ],
+        "effect": "Minor absorption reduction — generally beneficial overall",
+        "timing": "Take Atorvastatin 1 hour before high-fiber meals for best absorption",
+        "window": "Not a critical concern",
+        "alternatives": [
+          "High-fiber diet actually helps cholesterol management"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Dietary fiber is beneficial; only very high-fiber supplements may marginally reduce absorption"
+      },
+      {
+        "food": "Red Yeast Rice",
+        "emoji": "🍚",
+        "compound": "Monacolin K (natural lovastatin)",
+        "severity": "high",
+        "mechanism": "Red yeast rice contains monacolin K — a naturally occurring HMG-CoA reductase inhibitor chemically identical to lovastatin. Taking it with Atorvastatin is like taking two statins simultaneously, dramatically increasing risk of myopathy, rhabdomyolysis, and liver damage.",
+        "pathway": [
+          "Red yeast rice provides monacolin K",
+          "Acts as additional HMG-CoA inhibitor",
+          "Combined with Atorvastatin",
+          "Double HMG-CoA reductase inhibition",
+          "Severe myopathy risk",
+          "Rhabdomyolysis",
+          "Liver toxicity"
+        ],
+        "effect": "Additive statin toxicity — doubled muscle damage and liver risk",
+        "timing": "Never combine red yeast rice with any prescribed statin",
+        "window": "Complete avoidance required",
+        "alternatives": [
+          "Discuss with doctor for natural cholesterol support",
+          "Plant sterols (separate from dose)"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Any amount of red yeast rice combined with statin is dangerous"
+      }
+    ]
+  },
+  "Rosuvastatin": {
+    "generic": "Rosuvastatin Calcium (Crestor, Rozavel)",
+    "class": "Statin / HMG-CoA Reductase Inhibitor",
+    "mechanism": "Highly selective competitive inhibitor of HMG-CoA reductase; reduces hepatic LDL-C synthesis",
+    "halfLife": "19 hours",
+    "metabolism": "Minimal hepatic CYP2C9 (10%); mostly excreted unchanged; NOT CYP3A4",
+    "icon": "🫀",
+    "interactions": [
+      {
+        "food": "Antacids (Aluminum/Magnesium)",
+        "emoji": "🫙",
+        "compound": "Al(OH)₃ / Mg(OH)₂",
+        "severity": "medium",
+        "mechanism": "Antacid combinations containing aluminum and magnesium hydroxide reduce Rosuvastatin plasma concentration (Cmax) by approximately 54% and AUC by 33%. This occurs through adsorption of the drug to antacid particles in the gut, reducing absorption into bloodstream.",
+        "pathway": [
+          "Antacid cations bind Rosuvastatin",
+          "Drug adsorbed onto antacid particles",
+          "Reduced intestinal absorption",
+          "↓ Plasma drug concentration by ~54%",
+          "Reduced LDL-lowering efficacy",
+          "Cholesterol management compromised"
+        ],
+        "effect": "Significantly reduced drug efficacy",
+        "timing": "Take Rosuvastatin 2 hours before antacids",
+        "window": "Separate every dose by 2 hours",
+        "alternatives": [
+          "H2 antagonists (ranitidine) are safer",
+          "PPIs are acceptable"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Standard antacid dose reduces Rosuvastatin Cmax by over 50%"
+      },
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "low",
+        "mechanism": "Unlike Atorvastatin and Simvastatin, Rosuvastatin is NOT primarily metabolized by CYP3A4. Grapefruit's CYP3A4 inhibition has minimal impact on Rosuvastatin levels. This is a key advantage of Rosuvastatin over other statins for patients who consume grapefruit.",
+        "pathway": [
+          "Grapefruit inhibits CYP3A4",
+          "Rosuvastatin not CYP3A4-dependent",
+          "Minimal effect on drug levels",
+          "Rosuvastatin bioavailability unchanged",
+          "No significant interaction"
+        ],
+        "effect": "Minimal — Rosuvastatin is largely grapefruit-safe",
+        "timing": "No specific grapefruit restriction for Rosuvastatin",
+        "window": "Not a clinical concern",
+        "alternatives": [
+          "Grapefruit generally safe with Rosuvastatin (unlike other statins)"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Grapefruit does not significantly affect Rosuvastatin levels"
+      },
+      {
+        "food": "Large Amounts of Alcohol",
+        "emoji": "🍷",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Chronic heavy alcohol consumption causes hepatotoxicity and elevates liver enzymes. Rosuvastatin also has rare hepatotoxic potential. Combined chronic alcohol use significantly increases risk of liver damage and elevated ALT/AST. Moderate occasional drinking is generally tolerated.",
+        "pathway": [
+          "Chronic alcohol → hepatotoxicity",
+          "Elevated liver transaminases",
+          "Rosuvastatin also metabolized in liver",
+          "Combined hepatic stress",
+          "Risk of drug-induced liver injury",
+          "Monitor liver function tests"
+        ],
+        "effect": "Increased hepatotoxicity risk with chronic heavy drinking",
+        "timing": "Avoid chronic heavy alcohol use; moderate occasional drinking usually tolerated",
+        "window": "Risk is chronic — builds over time with heavy drinking",
+        "alternatives": [
+          "Moderate drinking (1–2 drinks occasionally) generally fine"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Chronic heavy drinking (>3 drinks/day) significantly increases liver risk"
+      }
+    ]
+  },
+  "Amlodipine": {
+    "generic": "Amlodipine Besylate (Norvasc, Amlong)",
+    "class": "Calcium Channel Blocker (Dihydropyridine)",
+    "mechanism": "Blocks L-type voltage-gated calcium channels in vascular smooth muscle; causes vasodilation",
+    "halfLife": "30–50 hours (very long)",
+    "metabolism": "Extensive hepatic CYP3A4 (90%)",
+    "icon": "❤️",
+    "interactions": [
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "high",
+        "mechanism": "Grapefruit's furanocoumarins strongly inhibit intestinal CYP3A4, the primary enzyme metabolizing Amlodipine. Studies show grapefruit increases Amlodipine AUC by up to 40%. Given Amlodipine's very long half-life (30–50 hours), even a single grapefruit can elevate drug levels for multiple days, causing severe hypotension (dangerously low blood pressure).",
+        "pathway": [
+          "Grapefruit → CYP3A4 inhibition",
+          "Amlodipine first-pass reduced",
+          "↑ Drug bioavailability (~40%)",
+          "↑ Plasma drug concentration",
+          "Excessive calcium channel blockade",
+          "Severe hypotension",
+          "Dizziness, syncope, falls risk"
+        ],
+        "effect": "Up to 40% higher drug levels — severe low blood pressure risk",
+        "timing": "Avoid grapefruit entirely during Amlodipine therapy",
+        "window": "Amlodipine's long half-life means effect persists for days",
+        "alternatives": [
+          "Orange",
+          "Apple",
+          "Mango",
+          "Pomegranate"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even one glass of grapefruit juice can elevate levels for 2–3 days"
+      },
+      {
+        "food": "High-Fat Meals",
+        "emoji": "🍔",
+        "compound": "Dietary fats",
+        "severity": "low",
+        "mechanism": "Amlodipine absorption is not significantly affected by food. High-fat meals may slightly increase the time to reach peak concentration but do not alter total absorption. No clinically meaningful interaction exists with dietary fat.",
+        "pathway": [
+          "High-fat meal slows gastric emptying",
+          "Minor delay in Amlodipine absorption",
+          "Tmax slightly delayed",
+          "Total AUC unchanged",
+          "No clinical significance"
+        ],
+        "effect": "No clinically significant interaction",
+        "timing": "Can be taken with or without food",
+        "window": "Not a concern",
+        "alternatives": [
+          "No dietary restrictions needed"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Food does not significantly affect Amlodipine"
+      },
+      {
+        "food": "Alcohol",
+        "emoji": "🍷",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Alcohol causes vasodilation independently. Amlodipine also causes vasodilation by blocking calcium channels. Combined, the vasodilatory effect is additive, leading to excessive blood pressure drop, dizziness, lightheadedness, and significantly increased fall risk — especially in elderly patients.",
+        "pathway": [
+          "Alcohol → peripheral vasodilation",
+          "Amlodipine → calcium channel blockade",
+          "Both ↓ vascular resistance",
+          "Additive blood pressure reduction",
+          "Excessive hypotension",
+          "Dizziness and syncope",
+          "Falls and injury risk"
+        ],
+        "effect": "Additive blood pressure lowering — dizziness and fall risk",
+        "timing": "Limit alcohol during Amlodipine therapy",
+        "window": "Effect is acute — occurs each time alcohol is consumed",
+        "alternatives": [
+          "Non-alcoholic beverages",
+          "Limit to 1 drink with food if at all"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Even 1–2 drinks can cause significant dizziness with Amlodipine"
+      }
+    ]
+  },
+  "Losartan": {
+    "generic": "Losartan Potassium (Cozaar, Losar)",
+    "class": "ARB — Angiotensin II Receptor Blocker",
+    "mechanism": "Selectively blocks AT1 angiotensin II receptors; reduces vasoconstriction and aldosterone secretion",
+    "halfLife": "2 hours (active metabolite EXP3174: 6–9 hours)",
+    "metabolism": "Hepatic CYP2C9 and CYP3A4; prodrug converted to active metabolite",
+    "icon": "🫀",
+    "interactions": [
+      {
+        "food": "High-Potassium Foods",
+        "emoji": "🍌",
+        "compound": "Potassium (K+)",
+        "severity": "high",
+        "mechanism": "Like ACE inhibitors, ARBs reduce aldosterone secretion, impairing renal potassium excretion. Consuming large amounts of potassium-rich foods (bananas, potatoes, oranges, coconut water) alongside Losartan causes potassium accumulation (hyperkalemia), which can cause life-threatening cardiac arrhythmias.",
+        "pathway": [
+          "Losartan blocks AT1 receptor",
+          "↓ Aldosterone secretion",
+          "↓ Renal K+ excretion",
+          "High-K+ foods add potassium load",
+          "Hyperkalemia (K+>5.5 mEq/L)",
+          "Altered cardiac membrane potential",
+          "Fatal arrhythmia risk"
+        ],
+        "effect": "Dangerous hyperkalemia — cardiac arrhythmia risk",
+        "timing": "Avoid potassium supplements; moderate potassium-rich food intake",
+        "window": "Monitor potassium blood levels regularly",
+        "alternatives": [
+          "White rice",
+          "Pasta",
+          "Bread",
+          "Apples",
+          "Blueberries"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Large daily K+ intake (bananas + coconut water + supplements) is dangerous"
+      },
+      {
+        "food": "Salt Substitutes",
+        "emoji": "🧂",
+        "compound": "Potassium chloride",
+        "severity": "high",
+        "mechanism": "Potassium chloride salt substitutes directly add potassium to the diet. Combined with Losartan's aldosterone-blocking effect (reduced K+ excretion), this leads to rapidly rising serum potassium and risk of hyperkalemia-induced cardiac arrest.",
+        "pathway": [
+          "KCl salt substitute → high K+ intake",
+          "ARB ↓ aldosterone → ↓ K+ excretion",
+          "K+ accumulates in serum",
+          "Hyperkalemia",
+          "Cardiac conduction disturbance",
+          "Potentially fatal arrhythmia"
+        ],
+        "effect": "Life-threatening hyperkalemia — avoid completely",
+        "timing": "Never use KCl-based salt substitutes with ARBs",
+        "window": "Complete avoidance required",
+        "alternatives": [
+          "Herbs, spices, lemon juice for flavor"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "All quantities of K+ salt substitutes are dangerous with ARBs"
+      },
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "medium",
+        "mechanism": "Losartan is converted to its active metabolite EXP3174 by CYP2C9 in the liver. Grapefruit primarily inhibits CYP3A4 but also mildly affects CYP2C9. This can reduce conversion to the active metabolite, paradoxically reducing Losartan's blood-pressure-lowering efficacy.",
+        "pathway": [
+          "Grapefruit → mild CYP2C9 inhibition",
+          "↓ Losartan → EXP3174 conversion",
+          "Reduced active metabolite levels",
+          "Reduced AT1 receptor blockade",
+          "Suboptimal blood pressure control",
+          "Hypertension risk"
+        ],
+        "effect": "Potentially reduced blood pressure control",
+        "timing": "Moderate grapefruit restriction advisable",
+        "window": "Monitor blood pressure if consuming grapefruit regularly",
+        "alternatives": [
+          "Orange",
+          "Apple juice",
+          "Pomegranate"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Regular large grapefruit consumption may reduce drug effectiveness"
+      }
+    ]
+  },
+  "Metoprolol": {
+    "generic": "Metoprolol Tartrate / Succinate (Lopressor, Betaloc)",
+    "class": "Beta-1 Selective Adrenergic Blocker",
+    "mechanism": "Selectively blocks cardiac β1 adrenergic receptors; reduces heart rate, contractility, and renin release",
+    "halfLife": "3–7 hours (immediate release); 12–24 hours (extended release)",
+    "metabolism": "Extensive hepatic CYP2D6",
+    "icon": "💓",
+    "interactions": [
+      {
+        "food": "High-Fat Meals",
+        "emoji": "🍔",
+        "compound": "Dietary fats",
+        "severity": "low",
+        "mechanism": "Food significantly increases Metoprolol bioavailability by 40% compared to fasting, due to enhanced hepatic blood flow and reduced first-pass metabolism. This is actually beneficial — consistent intake with food reduces variability. However, very high-fat meals may cause excessive drug absorption.",
+        "pathway": [
+          "High-fat meal consumed",
+          "↑ Splanchnic blood flow",
+          "↑ Hepatic drug delivery",
+          "Reduced first-pass extraction",
+          "↑ Metoprolol bioavailability by ~40%",
+          "More consistent drug levels",
+          "Take consistently with or without food"
+        ],
+        "effect": "Increased bioavailability (beneficial if consistent)",
+        "timing": "Take consistently — always with food or always without",
+        "window": "Consistency matters more than the food content",
+        "alternatives": [
+          "Take with same type of meal consistently"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Food increases absorption; benefit if taken consistently with meals"
+      },
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Alcohol enhances Metoprolol's blood pressure-lowering effect and adds CNS depression. Both drugs lower heart rate and blood pressure. Combined effect can cause excessive bradycardia (very slow heart rate), hypotension, and severe dizziness. Dehydration from alcohol also stresses the cardiovascular system.",
+        "pathway": [
+          "Alcohol → vasodilation + mild cardiac depression",
+          "Metoprolol → β1 blockade",
+          "Combined ↓ heart rate and blood pressure",
+          "Bradycardia risk",
+          "Excessive hypotension",
+          "Dizziness and syncope",
+          "Fall and injury risk"
+        ],
+        "effect": "Excessive blood pressure/heart rate lowering — syncope risk",
+        "timing": "Limit alcohol significantly during Metoprolol therapy",
+        "window": "Acute effect with each alcohol ingestion",
+        "alternatives": [
+          "Non-alcoholic drinks",
+          "Max 1 drink with food if at all"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "2–3 drinks can cause significant bradycardia and dizziness"
+      },
+      {
+        "food": "Orange Juice (certain types)",
+        "emoji": "🍊",
+        "compound": "Hesperidin, naringenin (flavonoids)",
+        "severity": "medium",
+        "mechanism": "Some studies show hesperidin in orange juice can inhibit intestinal drug transporters (OATP1A2), reducing Metoprolol absorption by up to 35–40%. This can reduce blood pressure control efficacy. Not all orange juices are equal — depends on flavonoid content.",
+        "pathway": [
+          "OJ flavonoids inhibit OATP1A2 transporter",
+          "Reduced intestinal Metoprolol uptake",
+          "↓ Drug absorption by 35–40%",
+          "Lower plasma drug concentration",
+          "Reduced β1 blockade",
+          "Suboptimal heart rate/BP control"
+        ],
+        "effect": "Up to 40% reduced drug absorption — worse BP control",
+        "timing": "Avoid large amounts of OJ within 4 hours of Metoprolol dose",
+        "window": "Separate OJ from dose timing",
+        "alternatives": [
+          "Apple juice",
+          "Water",
+          "Other fruit juices"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Large glass of OJ (≥240ml) at dose time significantly reduces absorption"
+      }
+    ]
+  },
+  "Omeprazole": {
+    "generic": "Omeprazole (Prilosec, Omez, Losec)",
+    "class": "Proton Pump Inhibitor (PPI)",
+    "mechanism": "Irreversibly inhibits H⁺/K⁺-ATPase (proton pump) in gastric parietal cells, blocking acid secretion",
+    "halfLife": "0.5–1.5 hours (effects last 24+ hours due to irreversible binding)",
+    "metabolism": "Extensive hepatic CYP2C19 and CYP3A4",
+    "icon": "🏥",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Omeprazole reduces gastric acid. Alcohol irritates the gastric lining and increases acid rebound. Additionally, Omeprazole is metabolized by CYP2C19 and alcohol may alter this enzyme activity, causing variability in drug levels. Alcohol also worsens the underlying acid reflux condition the drug is treating.",
+        "pathway": [
+          "Omeprazole → ↓ gastric acid",
+          "Alcohol directly irritates gastric mucosa",
+          "Alcohol may alter CYP2C19 activity",
+          "Unpredictable Omeprazole blood levels",
+          "Worsened reflux symptoms",
+          "Gastric irritation persists despite medication"
+        ],
+        "effect": "Worsened GI symptoms; reduced therapeutic efficacy",
+        "timing": "Avoid alcohol during Omeprazole therapy — defeats the purpose",
+        "window": "Avoid throughout treatment course",
+        "alternatives": [
+          "Water",
+          "Herbal tea (non-mint)",
+          "Alkaline water"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Any alcohol worsens acid reflux that Omeprazole is treating"
+      },
+      {
+        "food": "Acidic / Trigger Foods",
+        "emoji": "🌶️",
+        "compound": "Capsaicin, citric acid, spices",
+        "severity": "medium",
+        "mechanism": "While Omeprazole blocks acid production, trigger foods (spicy food, citrus, coffee, mint, chocolate, tomatoes) still cause lower esophageal sphincter (LES) relaxation and reflux. The drug cannot prevent food-triggered reflux events — it only reduces acid volume and severity.",
+        "pathway": [
+          "Trigger food consumed",
+          "LES relaxes inappropriately",
+          "Gastric contents reflux into esophagus",
+          "Omeprazole reduces acid — less burning",
+          "But reflux events still occur",
+          "Continued esophageal exposure to pepsin"
+        ],
+        "effect": "Reduced but not eliminated acid reflux symptoms",
+        "timing": "Avoid trigger foods in addition to taking Omeprazole",
+        "window": "Dietary management is essential alongside medication",
+        "alternatives": [
+          "Non-acidic vegetables",
+          "Lean protein",
+          "Whole grains",
+          "Alkaline foods"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Large amounts of trigger foods overwhelm PPI protection"
+      },
+      {
+        "food": "St. John's Wort",
+        "emoji": "🌿",
+        "compound": "Hyperforin",
+        "severity": "medium",
+        "mechanism": "St. John's Wort induces CYP2C19 and CYP3A4, the enzymes that metabolize Omeprazole. This accelerates Omeprazole breakdown, significantly reducing its plasma concentration and efficacy. Patients taking SJW may experience return of acid reflux symptoms despite taking their PPI.",
+        "pathway": [
+          "SJW hyperforin induces CYP2C19",
+          "Faster Omeprazole metabolism",
+          "↓ Drug plasma concentration",
+          "Reduced proton pump inhibition",
+          "Increased gastric acid secretion",
+          "Return of reflux/GERD symptoms"
+        ],
+        "effect": "Significantly reduced PPI efficacy — GERD symptoms return",
+        "timing": "Avoid St. John's Wort with Omeprazole",
+        "window": "SJW induction effect builds over 1–2 weeks",
+        "alternatives": [
+          "Chamomile tea",
+          "Slippery elm",
+          "Aloe vera juice (consult doctor)"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Regular SJW use substantially reduces Omeprazole effectiveness"
+      }
+    ]
+  },
+  "Pantoprazole": {
+    "generic": "Pantoprazole Sodium (Pantop, Protonix, Pan-D)",
+    "class": "Proton Pump Inhibitor (PPI)",
+    "mechanism": "Irreversibly binds H⁺/K⁺-ATPase in gastric parietal cells via thioether bond after acid activation",
+    "halfLife": "1–2 hours (effects last 24+ hours)",
+    "metabolism": "Hepatic CYP2C19 (primary) and CYP3A4; less CYP2C19-dependent than Omeprazole",
+    "icon": "🏥",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍷",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Similar to Omeprazole, alcohol directly irritates gastric and esophageal mucosa and worsens acid reflux — counteracting Pantoprazole's therapeutic goal. Alcohol also transiently stimulates gastric acid secretion before a rebound reduction, creating unpredictable acid levels.",
+        "pathway": [
+          "Alcohol directly irritates mucosa",
+          "Transient acid stimulation",
+          "Then acid rebound suppression",
+          "Pantoprazole already reducing acid",
+          "Net: unpredictable acid patterns",
+          "Worsened reflux and mucosal damage"
+        ],
+        "effect": "Worsened GI inflammation; reduced treatment efficacy",
+        "timing": "Avoid alcohol during Pantoprazole therapy",
+        "window": "Avoid throughout treatment",
+        "alternatives": [
+          "Water",
+          "Coconut water",
+          "Herbal tea"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Any regular alcohol use undermines GERD management"
+      },
+      {
+        "food": "Magnesium-depleting Diets",
+        "emoji": "🥗",
+        "compound": "Magnesium (Mg²⁺)",
+        "severity": "medium",
+        "mechanism": "Long-term PPI use (including Pantoprazole) reduces gastric acid, impairing magnesium absorption in the small intestine (magnesium requires acidic environment for uptake). Low dietary magnesium combined with PPI-induced reduced absorption causes hypomagnesemia — leading to muscle cramps, tremors, and cardiac arrhythmias.",
+        "pathway": [
+          "Pantoprazole ↓ gastric acid chronically",
+          "↓ Mg²⁺ absorption (acid-dependent)",
+          "Low dietary Mg worsens depletion",
+          "Hypomagnesemia develops",
+          "Muscle cramps and weakness",
+          "Cardiac arrhythmia risk"
+        ],
+        "effect": "Magnesium deficiency — especially with long-term PPI use",
+        "timing": "Eat magnesium-rich foods; consider Mg supplementation with long-term use",
+        "window": "Risk increases with PPI use >3 months",
+        "alternatives": [
+          "Magnesium-rich foods: nuts, seeds, leafy greens, dark chocolate"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Low Mg diet combined with long-term PPI use causes clinically significant depletion"
+      },
+      {
+        "food": "High-Protein Meals",
+        "emoji": "🥩",
+        "compound": "Dietary proteins",
+        "severity": "low",
+        "mechanism": "Protein-rich meals stimulate gastrin release, which drives acid secretion. In GERD patients, high-protein meals may transiently increase acid before Pantoprazole fully suppresses it. However, protein does not directly interact with the drug pharmacokinetically.",
+        "pathway": [
+          "Protein → stimulates gastrin release",
+          "Gastrin → parietal cell activation",
+          "Acid secretion temporarily stimulated",
+          "Pantoprazole suppresses proton pumps",
+          "But gastrin surge may partially overcome suppression",
+          "Mild GERD symptoms possible post-meal"
+        ],
+        "effect": "Transient acid stimulation — mild symptom worsening possible",
+        "timing": "Eat smaller protein portions; take Pantoprazole 30–60 min before meals",
+        "window": "Take PPI 30–60 minutes before first meal for best efficacy",
+        "alternatives": [
+          "Smaller protein portions",
+          "Lean proteins",
+          "Avoid eating close to bedtime"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Very large high-protein meals may transiently exceed PPI suppression"
+      }
+    ]
+  },
+  "Rabeprazole": {
+    "generic": "Rabeprazole Sodium (Razo, Aciphex, Rabeloc)",
+    "class": "Proton Pump Inhibitor (PPI)",
+    "mechanism": "Irreversibly inhibits gastric H⁺/K⁺-ATPase; converted to active sulfenamide in acidic canaliculi",
+    "halfLife": "1–2 hours (effects last 48+ hours)",
+    "metabolism": "Non-enzymatic and CYP2C19 (minor); least CYP2C19-dependent of all PPIs",
+    "icon": "🏥",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Rabeprazole's non-enzymatic metabolism makes it less susceptible to food-drug interactions than other PPIs, but alcohol still directly aggravates the GI conditions Rabeprazole treats. Alcohol increases esophageal and gastric mucosal permeability and triggers reflux via LES relaxation.",
+        "pathway": [
+          "Alcohol relaxes lower esophageal sphincter",
+          "Gastric contents reflux",
+          "Alcohol increases mucosal permeability",
+          "Esophageal irritation",
+          "Rabeprazole reduces acid but cannot prevent reflux events",
+          "Treatment partially undermined"
+        ],
+        "effect": "Undermines treatment efficacy for reflux/GERD",
+        "timing": "Avoid alcohol during therapy",
+        "window": "Avoid throughout treatment course",
+        "alternatives": [
+          "Non-alcoholic beverages",
+          "Herbal tea",
+          "Water"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Regular alcohol use significantly reduces therapeutic benefit"
+      },
+      {
+        "food": "Coffee / Caffeinated Drinks",
+        "emoji": "☕",
+        "compound": "Caffeine, chlorogenic acid",
+        "severity": "medium",
+        "mechanism": "Caffeine relaxes the lower esophageal sphincter and directly stimulates gastric acid secretion. Coffee (even decaf due to chlorogenic acids) is a potent acid trigger. Despite Rabeprazole reducing acid, caffeine continues to trigger reflux events and worsen esophageal irritation.",
+        "pathway": [
+          "Caffeine/coffee consumed",
+          "LES relaxation triggered",
+          "Gastric acid refluxes",
+          "Chlorogenic acids stimulate acid",
+          "Rabeprazole suppresses acid production",
+          "But volume/frequency of reflux events unchanged",
+          "Esophageal damage may continue"
+        ],
+        "effect": "Continued reflux events despite acid suppression",
+        "timing": "Limit or avoid caffeine/coffee during Rabeprazole therapy",
+        "window": "Avoid especially in morning before medication takes effect",
+        "alternatives": [
+          "Decaf (in moderation)",
+          "Herbal tea (non-peppermint)",
+          "Chicory coffee"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Even 1–2 cups of coffee daily significantly worsens GERD despite PPI use"
+      },
+      {
+        "food": "Vitamin B12-rich Foods",
+        "emoji": "🥩",
+        "compound": "Cyanocobalamin (Vitamin B12)",
+        "severity": "low",
+        "mechanism": "Long-term PPI use reduces gastric acid, which is needed to separate B12 from food proteins (via pepsin activation). This reduces dietary B12 absorption from food, though crystalline B12 (supplements) is unaffected. Eating B12-rich foods helps partially compensate but may not fully prevent deficiency.",
+        "pathway": [
+          "Rabeprazole ↓ gastric acid chronically",
+          "↓ Pepsin activation",
+          "↓ B12 release from food proteins",
+          "Reduced B12 absorption from diet",
+          "B12 deficiency risk over years",
+          "Neurological symptoms possible"
+        ],
+        "effect": "Gradual B12 depletion with long-term PPI use",
+        "timing": "Monitor B12 levels annually with long-term PPI; eat B12-rich foods",
+        "window": "Risk develops slowly over months–years",
+        "alternatives": [
+          "B12 supplements (crystalline form absorbed without acid)",
+          "Fortified foods"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Long-term PPI use (>1 year) meaningfully reduces dietary B12 absorption"
+      }
+    ]
+  },
+  "Escitalopram": {
+    "generic": "Escitalopram Oxalate (Lexapro, Cipralex, Nexito)",
+    "class": "SSRI (Selective Serotonin Reuptake Inhibitor)",
+    "mechanism": "Highly selective inhibitor of serotonin transporter (SERT); increases synaptic 5-HT concentration",
+    "halfLife": "27–32 hours",
+    "metabolism": "Hepatic CYP2C19, CYP3A4, CYP2D6",
+    "icon": "🧠",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍷",
+        "compound": "Ethanol",
+        "severity": "high",
+        "mechanism": "Alcohol is a CNS depressant that worsens depression and anxiety — the exact conditions Escitalopram treats. Alcohol also potentiates the sedative side effects of SSRIs (drowsiness, impaired cognition, motor incoordination). Furthermore, alcohol disrupts serotonin signaling, directly opposing the drug's mechanism of action.",
+        "pathway": [
+          "Alcohol → CNS depression",
+          "↓ Serotonin in limbic system",
+          "Escitalopram ↑ synaptic serotonin",
+          "Alcohol counteracts this effect",
+          "Enhanced sedation and cognitive impairment",
+          "Worsened depression/anxiety symptoms",
+          "↑ Suicide risk with heavy drinking"
+        ],
+        "effect": "Severely worsened depression; dangerous CNS depression",
+        "timing": "Avoid alcohol completely during SSRI therapy",
+        "window": "Avoid throughout entire course of treatment",
+        "alternatives": [
+          "Non-alcoholic alternatives",
+          "Sparkling water",
+          "Herbal mocktails"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even 1–2 drinks significantly impairs SSRI efficacy and safety"
+      },
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "medium",
+        "mechanism": "Escitalopram is metabolized by CYP2C19 and CYP3A4. Grapefruit inhibits CYP3A4, potentially increasing Escitalopram plasma levels. Elevated SSRI levels increase risk of serotonin syndrome (agitation, tremor, hyperthermia) and QT interval prolongation (heart rhythm disturbance).",
+        "pathway": [
+          "Grapefruit → CYP3A4 inhibition",
+          "↓ Escitalopram metabolism",
+          "↑ Drug plasma concentration",
+          "↑ Synaptic serotonin",
+          "Serotonin syndrome risk",
+          "QT prolongation risk",
+          "Cardiac arrhythmia possible"
+        ],
+        "effect": "Elevated drug levels — serotonin syndrome and cardiac risks",
+        "timing": "Limit or avoid grapefruit; especially first 4 weeks of therapy",
+        "window": "Grapefruit effect lasts 24–72 hours",
+        "alternatives": [
+          "Orange",
+          "Apple",
+          "Berries",
+          "Melon"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Daily grapefruit consumption poses meaningful risk for QT prolongation"
+      },
+      {
+        "food": "St. John's Wort",
+        "emoji": "🌿",
+        "compound": "Hyperforin, hypericin",
+        "severity": "high",
+        "mechanism": "St. John's Wort independently inhibits serotonin reuptake (natural SSRI effect). Combined with Escitalopram, this causes dangerously high synaptic serotonin — serotonin syndrome. Symptoms include agitation, confusion, rapid heart rate, fever, muscle rigidity, and can be life-threatening.",
+        "pathway": [
+          "SJW inhibits SERT (natural SSRI)",
+          "Escitalopram also blocks SERT",
+          "Combined: massive ↑ synaptic 5-HT",
+          "5-HT1A/2A receptor overstimulation",
+          "Serotonin syndrome",
+          "Hyperthermia, seizures, muscle rigidity",
+          "Potentially fatal"
+        ],
+        "effect": "Life-threatening serotonin syndrome",
+        "timing": "NEVER combine — absolute contraindication",
+        "window": "Wait 2 weeks after stopping either before starting the other",
+        "alternatives": [
+          "Chamomile tea",
+          "Lavender aromatherapy",
+          "Meditation apps"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Any amount of SJW with SSRI can trigger serotonin syndrome"
+      }
+    ]
+  },
+  "Fluoxetine": {
+    "generic": "Fluoxetine Hydrochloride (Prozac, Fludac, Flunil)",
+    "class": "SSRI (Selective Serotonin Reuptake Inhibitor)",
+    "mechanism": "Selective inhibitor of SERT; also inhibits CYP2D6 significantly (important drug-drug interaction source)",
+    "halfLife": "1–4 days (active metabolite norfluoxetine: 4–16 days — extremely long)",
+    "metabolism": "Hepatic CYP2D6 (primary); active metabolite norfluoxetine",
+    "icon": "🧠",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "high",
+        "mechanism": "Fluoxetine's extraordinarily long half-life (norfluoxetine: up to 16 days) means alcohol interactions extend long after the drink. Alcohol causes CNS depression opposing Fluoxetine's antidepressant effect, impairs serotonergic signaling, and enhances drug side effects including dizziness and psychomotor impairment. Heavy drinking is associated with SSRI treatment failure.",
+        "pathway": [
+          "Alcohol → ↓ serotonin synthesis",
+          "Fluoxetine → ↑ serotonin retention",
+          "Alcohol counters therapeutic effect",
+          "Enhanced CNS depression",
+          "Impaired motor and cognitive function",
+          "Worsened depression/anxiety",
+          "Increased suicide risk"
+        ],
+        "effect": "Worsened depression; impaired cognition and motor function",
+        "timing": "Avoid alcohol throughout treatment — effects persist weeks after stopping Fluoxetine",
+        "window": "Norfluoxetine persists for 4–16 days; interactions possible even weeks after stopping",
+        "alternatives": [
+          "Herbal tea",
+          "Sparkling water",
+          "Non-alcoholic alternatives"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Any regular alcohol use significantly undermines antidepressant treatment"
+      },
+      {
+        "food": "Tyramine-rich Foods",
+        "emoji": "🧀",
+        "compound": "Tyramine",
+        "severity": "low",
+        "mechanism": "Unlike MAOIs, SSRIs like Fluoxetine do not inhibit MAO enzymes. Tyramine in aged cheese, cured meats, etc. is metabolized normally by MAO-A. No dangerous tyramine reaction occurs with SSRIs. This is a major safety advantage over MAOIs.",
+        "pathway": [
+          "Tyramine consumed with food",
+          "MAO-A NOT inhibited by Fluoxetine",
+          "Normal tyramine metabolism",
+          "No systemic tyramine accumulation",
+          "No hypertensive crisis",
+          "Normal blood pressure maintained"
+        ],
+        "effect": "No significant interaction — SSRIs are safe with tyramine foods",
+        "timing": "No dietary tyramine restriction needed with Fluoxetine",
+        "window": "No restriction necessary",
+        "alternatives": [
+          "All foods safe — no MAOI-like tyramine diet needed"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Tyramine-containing foods pose no danger with Fluoxetine"
+      },
+      {
+        "food": "St. John's Wort",
+        "emoji": "🌿",
+        "compound": "Hyperforin",
+        "severity": "high",
+        "mechanism": "St. John's Wort has natural SSRI-like effects through SERT inhibition. Combined with Fluoxetine (already a potent SSRI), serotonin syndrome becomes a serious risk. Additionally, Fluoxetine's very long half-life (norfluoxetine up to 16 days) means this interaction risk persists long after stopping either agent.",
+        "pathway": [
+          "SJW → natural SERT inhibition",
+          "Fluoxetine → potent SERT inhibition",
+          "Additive ↑ synaptic serotonin",
+          "5-HT receptor overstimulation",
+          "Serotonin syndrome symptoms",
+          "Fever, agitation, tremors",
+          "Life-threatening if untreated"
+        ],
+        "effect": "Serotonin syndrome — potentially life-threatening",
+        "timing": "Absolute contraindication; wait 5 weeks after stopping Fluoxetine before starting SJW",
+        "window": "5-week washout needed due to norfluoxetine's long half-life",
+        "alternatives": [
+          "Do not use herbal antidepressants with Fluoxetine without doctor approval"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Any amount contraindicated; Fluoxetine's long half-life extends risk for weeks"
+      }
+    ]
+  },
+  "Clonazepam": {
+    "generic": "Clonazepam (Klonopin, Rivotril, Clonotril)",
+    "class": "Benzodiazepine / Antiepileptic / Anxiolytic",
+    "mechanism": "Positive allosteric modulator of GABA-A receptors; enhances chloride ion influx, reducing neuronal excitability",
+    "halfLife": "18–50 hours",
+    "metabolism": "Hepatic CYP3A4; 7-aminoclonazepam is major metabolite",
+    "icon": "⚡",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍷",
+        "compound": "Ethanol",
+        "severity": "high",
+        "mechanism": "Alcohol and Clonazepam both enhance GABA-A receptor activity, causing additive CNS depression. The combination produces profound sedation, respiratory depression, and loss of consciousness. At high doses this combination can be fatal — it is one of the most dangerous drug-alcohol combinations. Even moderate drinking can cause life-threatening respiratory suppression.",
+        "pathway": [
+          "Clonazepam → ↑ GABA-A Cl⁻ influx",
+          "Alcohol → ↑ GABA-A sensitivity",
+          "Both → CNS depression",
+          "Profound sedation",
+          "Respiratory depression",
+          "Hypoxia / respiratory failure",
+          "Death possible"
+        ],
+        "effect": "Life-threatening CNS and respiratory depression",
+        "timing": "ABSOLUTE CONTRAINDICATION — never combine",
+        "window": "Avoid completely throughout therapy",
+        "alternatives": [
+          "No alcohol during Clonazepam therapy"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even 1–2 drinks with Clonazepam can cause fatal respiratory depression"
+      },
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "high",
+        "mechanism": "Clonazepam is primarily metabolized by CYP3A4. Grapefruit's furanocoumarins inhibit intestinal CYP3A4, significantly increasing Clonazepam bioavailability. This leads to higher drug blood levels, prolonged sedation, excessive drowsiness, impaired coordination, and risk of respiratory depression.",
+        "pathway": [
+          "Grapefruit → CYP3A4 inhibition",
+          "Clonazepam first-pass reduced",
+          "↑ Drug bioavailability",
+          "↑ Plasma GABA-A modulation",
+          "Prolonged excessive sedation",
+          "Respiratory depression risk",
+          "Impaired driving/cognition"
+        ],
+        "effect": "Significantly elevated drug levels — severe sedation and respiratory risk",
+        "timing": "Avoid grapefruit and grapefruit juice entirely",
+        "window": "Effect lasts 24–72 hours per serving of grapefruit",
+        "alternatives": [
+          "Orange",
+          "Apple juice",
+          "Water"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even one glass of grapefruit juice can dangerously elevate Clonazepam levels"
+      },
+      {
+        "food": "Caffeine",
+        "emoji": "☕",
+        "compound": "Caffeine (adenosine antagonist)",
+        "severity": "medium",
+        "mechanism": "Caffeine is a CNS stimulant that antagonizes adenosine receptors, opposing the sedative/anxiolytic effect of Clonazepam. High caffeine intake can significantly reduce Clonazepam's therapeutic anxiolytic benefit. Caffeine also independently exacerbates anxiety, panic attacks, and seizure thresholds — worsening the conditions Clonazepam treats.",
+        "pathway": [
+          "Caffeine → adenosine antagonism",
+          "CNS excitation / stimulation",
+          "Opposes GABA-A enhancement",
+          "↓ Anxiolytic effect of Clonazepam",
+          "Worsened anxiety and panic",
+          "May lower seizure threshold",
+          "Reduced therapeutic benefit"
+        ],
+        "effect": "Reduced therapeutic anxiolytic effect; worsened anxiety",
+        "timing": "Limit caffeine significantly during Clonazepam therapy",
+        "window": "Avoid caffeine especially around dose time",
+        "alternatives": [
+          "Decaf coffee",
+          "Herbal tea (chamomile, passionflower)",
+          "Rooibos"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "High caffeine intake (>3 cups/day) significantly undermines Clonazepam's efficacy"
+      }
+    ]
+  },
+  "Cetirizine": {
+    "generic": "Cetirizine Hydrochloride (Zyrtec, Cetzine, Alerid)",
+    "class": "Second-generation Antihistamine (H1 receptor antagonist)",
+    "mechanism": "Selectively blocks peripheral H1 histamine receptors; minimal CNS penetration compared to first-gen antihistamines",
+    "halfLife": "8–9 hours",
+    "metabolism": "Minimal hepatic; 70% excreted unchanged in urine",
+    "icon": "🌸",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Although Cetirizine is a 'non-drowsy' antihistamine, it still causes mild CNS depression in some people. Combined with alcohol's CNS depressant effects, sedation, impaired coordination, and drowsiness are significantly amplified. Driving or operating machinery becomes dangerous.",
+        "pathway": [
+          "Cetirizine → mild H1 CNS blockade",
+          "Some sedation in susceptible individuals",
+          "Alcohol → GABA-A enhancement + CNS depression",
+          "Combined excessive sedation",
+          "Impaired psychomotor function",
+          "Dangerous drowsiness",
+          "Impaired driving"
+        ],
+        "effect": "Enhanced sedation — impaired driving and coordination",
+        "timing": "Avoid alcohol or use with extreme caution",
+        "window": "Avoid on same day as Cetirizine",
+        "alternatives": [
+          "Non-alcoholic drinks"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "1–2 drinks can cause significant impairment in some individuals"
+      },
+      {
+        "food": "Apple / Orange / Grapefruit Juice",
+        "emoji": "🍊",
+        "compound": "Organic acids, flavonoids (fruit juice)",
+        "severity": "medium",
+        "mechanism": "Large amounts of fruit juices (apple, orange, grapefruit) have been shown to inhibit the OATP1A2 intestinal transporter, which is involved in Cetirizine absorption. Studies show fruit juice can reduce Cetirizine AUC by up to 70–73%, dramatically reducing antihistamine efficacy.",
+        "pathway": [
+          "Fruit juice → OATP1A2 transporter inhibition",
+          "Reduced intestinal Cetirizine uptake",
+          "Drug AUC reduced by up to 73%",
+          "Significantly lower plasma drug levels",
+          "Reduced H1 receptor blockade",
+          "Allergy symptoms poorly controlled",
+          "Sneezing, itching, runny nose persist"
+        ],
+        "effect": "Up to 73% reduction in drug absorption — allergy symptoms return",
+        "timing": "Take Cetirizine with water — not fruit juice",
+        "window": "Avoid fruit juice within 4 hours of each dose",
+        "alternatives": [
+          "Plain water is best",
+          "Milk is acceptable"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "A standard glass of apple/OJ/grapefruit juice can reduce efficacy by >50%"
+      },
+      {
+        "food": "Caffeine",
+        "emoji": "☕",
+        "compound": "Caffeine",
+        "severity": "low",
+        "mechanism": "Caffeine stimulates the CNS and may slightly counteract any mild sedative effect of Cetirizine in sensitive individuals. This is generally not harmful and may even help with the drowsiness side effect. No pharmacokinetic interaction exists between caffeine and Cetirizine.",
+        "pathway": [
+          "Caffeine → adenosine antagonism",
+          "Mild CNS stimulation",
+          "May reduce Cetirizine-related drowsiness",
+          "No pharmacokinetic interaction",
+          "Generally benign combination"
+        ],
+        "effect": "May reduce mild drowsiness — generally not harmful",
+        "timing": "No specific restriction",
+        "window": "Not a concern",
+        "alternatives": [
+          "Coffee is generally safe with Cetirizine"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Moderate caffeine is fine; excessive caffeine worsens allergy symptoms indirectly"
+      }
+    ]
+  },
+  "Levocetirizine": {
+    "generic": "Levocetirizine Dihydrochloride (Xyzal, Levocet, Vozet)",
+    "class": "Second-generation Antihistamine (R-enantiomer of Cetirizine)",
+    "mechanism": "Selective competitive antagonist of H1 histamine receptors; more potent than Cetirizine with lower dose",
+    "halfLife": "8–9 hours",
+    "metabolism": "Minimal — primarily excreted unchanged in urine (>85%); not a CYP substrate",
+    "icon": "🌸",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍷",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Levocetirizine has slightly more CNS penetration than Cetirizine and may cause more sedation. Combined with alcohol's CNS depressant effects, sedation and psychomotor impairment are significantly worsened. Patients should not drive after taking Levocetirizine with alcohol.",
+        "pathway": [
+          "Levocetirizine → H1 blockade with mild CNS effect",
+          "Alcohol → GABA-A CNS depression",
+          "Additive sedation",
+          "↓ Psychomotor performance",
+          "Impaired reaction time",
+          "Driving dangerously impaired"
+        ],
+        "effect": "Enhanced sedation and impaired psychomotor function",
+        "timing": "Avoid alcohol with Levocetirizine",
+        "window": "Avoid on same day",
+        "alternatives": [
+          "Non-alcoholic beverages"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Even moderate drinking causes meaningful impairment with Levocetirizine"
+      },
+      {
+        "food": "Fruit Juices (Apple, OJ, Grapefruit)",
+        "emoji": "🍹",
+        "compound": "Flavonoids, organic acids (OATP inhibitors)",
+        "severity": "medium",
+        "mechanism": "Like Cetirizine, Levocetirizine absorption involves intestinal transporters susceptible to inhibition by fruit juice flavonoids. Large amounts of fruit juice may reduce Levocetirizine bioavailability by 50–70%, significantly diminishing its antihistamine effect.",
+        "pathway": [
+          "Fruit juice → OATP transporter inhibition",
+          "↓ Intestinal Levocetirizine uptake",
+          "Reduced plasma drug levels",
+          "↓ H1 receptor occupancy",
+          "Inadequate allergy control",
+          "Itching, sneezing, hives persist"
+        ],
+        "effect": "Significantly reduced drug absorption — reduced allergy control",
+        "timing": "Always take with plain water",
+        "window": "Avoid fruit juice within 4 hours of dose",
+        "alternatives": [
+          "Water is always best for antihistamine absorption"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Large fruit juice quantities can reduce absorption by over 50%"
+      },
+      {
+        "food": "High-Fat Meals",
+        "emoji": "🍔",
+        "compound": "Dietary fats",
+        "severity": "low",
+        "mechanism": "Food slightly delays peak plasma concentration of Levocetirizine but does not affect total bioavailability. Taking it with food may help if GI discomfort occurs. The allergy-relief onset may be delayed by 30–60 minutes when taken with a large meal.",
+        "pathway": [
+          "High-fat meal slows gastric emptying",
+          "Minor delay in Levocetirizine absorption",
+          "Tmax delayed ~60 min",
+          "Total AUC unchanged",
+          "Allergy relief onset slightly delayed",
+          "No clinical significance"
+        ],
+        "effect": "Slightly delayed onset — not clinically significant",
+        "timing": "Can be taken with or without food",
+        "window": "For fastest effect take without food",
+        "alternatives": [
+          "Take at bedtime for overnight allergy control regardless of food"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Meal timing only affects speed of onset, not total effect"
+      }
+    ]
+  },
+  "Montelukast": {
+    "generic": "Montelukast Sodium (Singulair, Montair, Telekast)",
+    "class": "Leukotriene Receptor Antagonist (LTRA)",
+    "mechanism": "Selectively blocks cysteinyl leukotriene CysLT1 receptors, reducing bronchoconstriction and inflammation",
+    "halfLife": "2.7–5.5 hours",
+    "metabolism": "Extensive hepatic CYP3A4 and CYP2C8; active metabolites",
+    "icon": "🫁",
+    "interactions": [
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "medium",
+        "mechanism": "Montelukast is metabolized by CYP3A4. Grapefruit's furanocoumarins inhibit CYP3A4, potentially increasing Montelukast plasma levels. While this interaction is less critical than with statins or benzodiazepines, elevated levels may increase risk of neuropsychiatric side effects (agitation, depression, sleep disturbances) that Montelukast is already associated with.",
+        "pathway": [
+          "Grapefruit → CYP3A4 inhibition",
+          "↓ Montelukast metabolism",
+          "↑ Drug plasma concentration",
+          "↑ Receptor occupancy",
+          "Potential ↑ neuropsychiatric side effects",
+          "Agitation, mood changes, insomnia"
+        ],
+        "effect": "Potential increase in neuropsychiatric side effects",
+        "timing": "Limit grapefruit consumption; especially in children",
+        "window": "Monitor for mood or behavior changes",
+        "alternatives": [
+          "Orange",
+          "Apple",
+          "Regular citrus fruits"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Regular grapefruit juice consumption may elevate drug levels meaningfully"
+      },
+      {
+        "food": "High-Fat Meals",
+        "emoji": "🍔",
+        "compound": "Dietary fats",
+        "severity": "low",
+        "mechanism": "For chewable Montelukast tablets (used in children), a high-fat meal reduces Cmax by 63% and AUC by 35% — a significant reduction in young patients. Regular film-coated tablets are less affected by food but should ideally be taken consistently. Evening dosing is recommended regardless of meals.",
+        "pathway": [
+          "High-fat meal slows gastric emptying",
+          "Reduced Montelukast Cmax (chewable: -63%)",
+          "↓ Peak drug level",
+          "Reduced leukotriene receptor blockade",
+          "Potentially reduced asthma/allergy control",
+          "Especially significant for pediatric chewable form"
+        ],
+        "effect": "Significantly reduced absorption of chewable form in children",
+        "timing": "Avoid high-fat meals with chewable tablets; evening dosing recommended",
+        "window": "Most important for chewable form; adult tablets less affected",
+        "alternatives": [
+          "Take 1 hour before or 2 hours after meals for chewable form"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "High-fat meals reduce chewable Montelukast Cmax by 63% — clinically important in children"
+      },
+      {
+        "food": "St. John's Wort",
+        "emoji": "🌿",
+        "compound": "Hyperforin",
+        "severity": "medium",
+        "mechanism": "St. John's Wort induces CYP3A4 and CYP2C8, both of which metabolize Montelukast. Induction accelerates Montelukast breakdown, reducing plasma levels and therapeutic efficacy. Patients using SJW concurrently may experience worsened asthma or allergy control.",
+        "pathway": [
+          "SJW → CYP3A4 and CYP2C8 induction",
+          "Faster Montelukast metabolism",
+          "↓ Drug plasma concentration",
+          "Reduced CysLT1 receptor blockade",
+          "Insufficient bronchoprotection",
+          "Worsened asthma or allergy symptoms"
+        ],
+        "effect": "Reduced drug efficacy — worsened asthma/allergy control",
+        "timing": "Avoid St. John's Wort during Montelukast therapy",
+        "window": "SJW induction builds over 1–2 weeks",
+        "alternatives": [
+          "Discuss alternative supplements with pharmacist"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Regular SJW use substantially reduces Montelukast therapeutic levels"
+      }
+    ]
+  },
+  "Clarithromycin": {
+    "generic": "Clarithromycin (Biaxin, Claribid, Clariwin)",
+    "class": "Macrolide Antibiotic",
+    "mechanism": "Binds 50S ribosomal subunit blocking bacterial protein synthesis; potent CYP3A4 inhibitor",
+    "halfLife": "3–7 hours",
+    "metabolism": "Hepatic CYP3A4 (also strong CYP3A4 inhibitor); active metabolite 14-OH-clarithromycin",
+    "icon": "🦠",
+    "interactions": [
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "high",
+        "mechanism": "Clarithromycin is both a CYP3A4 substrate AND a potent CYP3A4 inhibitor. Grapefruit adds further CYP3A4 inhibition, dramatically increasing Clarithromycin blood levels. Elevated levels increase QT interval prolongation risk — a dangerous cardiac arrhythmia (torsades de pointes) that can cause sudden cardiac arrest.",
+        "pathway": [
+          "Grapefruit → CYP3A4 inhibition",
+          "Clarithromycin already inhibits CYP3A4",
+          "Combined: drug accumulates",
+          "↑ Plasma Clarithromycin levels",
+          "Excessive cardiac K+ channel blockade",
+          "QT interval prolongation",
+          "Torsades de pointes / cardiac arrest"
+        ],
+        "effect": "Dangerous QT prolongation — risk of fatal cardiac arrhythmia",
+        "timing": "Avoid grapefruit entirely during Clarithromycin therapy",
+        "window": "Effect lasts 24–72 hours per grapefruit serving",
+        "alternatives": [
+          "Orange",
+          "Apple juice",
+          "Water"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even one glass of grapefruit juice can dangerously elevate drug levels"
+      },
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Alcohol does not significantly alter Clarithromycin pharmacokinetics but impairs immune system function, reducing the effectiveness of antibiotic therapy. Alcohol-induced dehydration also reduces drug distribution to infected tissues. GI side effects (nausea, diarrhea) of this antibiotic are worsened by alcohol.",
+        "pathway": [
+          "Alcohol → immunosuppression",
+          "Reduced white blood cell function",
+          "Antibiotic fights infection alone",
+          "GI side effects worsened",
+          "Nausea/vomiting may cause dose non-compliance",
+          "Risk of treatment failure"
+        ],
+        "effect": "Reduced immune response; worsened GI side effects",
+        "timing": "Avoid alcohol during the full antibiotic course",
+        "window": "Avoid throughout treatment (7–14 days typically)",
+        "alternatives": [
+          "Water",
+          "Electrolyte drinks",
+          "Herbal tea"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Even moderate drinking impairs immune recovery during infection treatment"
+      },
+      {
+        "food": "Dairy / Calcium-rich Foods",
+        "emoji": "🥛",
+        "compound": "Calcium ions",
+        "severity": "low",
+        "mechanism": "Unlike tetracyclines or fluoroquinolones, Clarithromycin absorption is NOT significantly impaired by calcium or dairy. It can be taken with food or milk. Food actually helps reduce GI side effects. No clinically meaningful chelation occurs between macrolides and calcium.",
+        "pathway": [
+          "Calcium in dairy",
+          "No chelation with Clarithromycin",
+          "Drug absorbed normally",
+          "No significant interaction",
+          "Food may reduce GI side effects"
+        ],
+        "effect": "No significant interaction — dairy is safe with Clarithromycin",
+        "timing": "Can be taken with food or milk — actually recommended to reduce stomach upset",
+        "window": "No restriction",
+        "alternatives": [
+          "Taking with food is preferred to reduce nausea"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Dairy does not affect Clarithromycin absorption"
+      }
+    ]
+  },
+  "Levofloxacin": {
+    "generic": "Levofloxacin (Levaquin, Levoday, Tavanic)",
+    "class": "Fluoroquinolone Antibiotic",
+    "mechanism": "Inhibits bacterial DNA gyrase and topoisomerase IV; bactericidal",
+    "halfLife": "6–8 hours",
+    "metabolism": "Minimal hepatic; 87% excreted unchanged in urine",
+    "icon": "🦠",
+    "interactions": [
+      {
+        "food": "Dairy / Calcium-rich Foods",
+        "emoji": "🥛",
+        "compound": "Calcium ions (Ca²⁺)",
+        "severity": "high",
+        "mechanism": "Like Ciprofloxacin, Levofloxacin undergoes chelation with divalent cations. Calcium from dairy forms insoluble complexes with the drug's 3-carboxyl and 4-oxo groups in the gut, reducing bioavailability by 25–40%. Calcium-fortified foods and antacids pose the same risk.",
+        "pathway": [
+          "Dairy Ca²⁺ released in gut",
+          "Chelation with Levofloxacin",
+          "Insoluble chelate forms",
+          "Cannot cross gut wall",
+          "Reduced drug absorption",
+          "Sub-therapeutic blood levels",
+          "Antibiotic treatment failure"
+        ],
+        "effect": "25–40% reduced absorption — risk of antibiotic failure",
+        "timing": "Take 2 hours BEFORE or 6 hours AFTER dairy",
+        "window": "Strictly separate every dose",
+        "alternatives": [
+          "Plain water",
+          "Non-calcium drinks"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even one glass of milk at dose time significantly reduces absorption"
+      },
+      {
+        "food": "Caffeine",
+        "emoji": "☕",
+        "compound": "Caffeine",
+        "severity": "medium",
+        "mechanism": "Levofloxacin inhibits CYP1A2, the enzyme that metabolizes caffeine. This significantly extends caffeine's half-life, causing caffeine toxicity — severe insomnia, heart palpitations, tremors, and anxiety. Effects are more pronounced than with Ciprofloxacin.",
+        "pathway": [
+          "Levofloxacin inhibits CYP1A2",
+          "Caffeine not metabolized normally",
+          "Caffeine half-life extends 2–4x",
+          "Caffeine accumulates in blood",
+          "CNS overstimulation",
+          "Palpitations, insomnia, tremors",
+          "Anxiety worsened"
+        ],
+        "effect": "Caffeine toxicity — palpitations, severe insomnia, anxiety",
+        "timing": "Minimize or avoid caffeine during Levofloxacin course",
+        "window": "Effect lasts entire antibiotic course (5–14 days)",
+        "alternatives": [
+          "Decaf coffee",
+          "Herbal tea",
+          "Chamomile",
+          "Rooibos"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "One cup of coffee may feel like 3–4 cups due to impaired metabolism"
+      },
+      {
+        "food": "Iron-fortified Foods",
+        "emoji": "🥣",
+        "compound": "Ferrous/ferric iron (Fe²⁺/Fe³⁺)",
+        "severity": "high",
+        "mechanism": "Iron ions form stable chelation complexes with the fluoroquinolone molecule at its metal-chelating sites. Iron-fortified cereals, iron supplements, and spinach all provide iron that binds Levofloxacin in the gut lumen, preventing systemic absorption and compromising treatment.",
+        "pathway": [
+          "Iron-fortified food consumed",
+          "Fe²⁺/Fe³⁺ chelate with Levofloxacin",
+          "Insoluble complex excreted",
+          "Drug not absorbed",
+          "Sub-therapeutic plasma levels",
+          "Bacteria not suppressed",
+          "Resistance risk"
+        ],
+        "effect": "Severely reduced antibiotic absorption",
+        "timing": "Take 2 hours before or 3 hours after iron-containing foods",
+        "window": "Strict separation at every dose",
+        "alternatives": [
+          "Low-iron meal around dose time: eggs, bread, rice, vegetables"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Iron supplements can reduce absorption by 50–80%"
+      }
+    ]
+  },
+  "Metronidazole": {
+    "generic": "Metronidazole (Flagyl, Metrogyl, Metrocid)",
+    "class": "Nitroimidazole Antibiotic / Antiprotozoal",
+    "mechanism": "Reduced to cytotoxic nitro radical by anaerobic bacteria/protozoa; damages DNA",
+    "halfLife": "6–12 hours",
+    "metabolism": "Hepatic oxidation and glucuronidation; CYP2C9 substrate",
+    "icon": "🦠",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol / Acetaldehyde",
+        "severity": "high",
+        "mechanism": "Metronidazole inhibits aldehyde dehydrogenase (ALDH), the enzyme that converts toxic acetaldehyde to acetate during alcohol metabolism. When alcohol is consumed, acetaldehyde accumulates rapidly causing a severe disulfiram-like reaction: intense flushing, throbbing headache, nausea, vomiting, palpitations, and hypotension. This can be dangerous and extremely distressing.",
+        "pathway": [
+          "Alcohol consumed → ethanol absorbed",
+          "Liver oxidizes ethanol → acetaldehyde",
+          "Metronidazole blocks ALDH enzyme",
+          "Acetaldehyde cannot be metabolized",
+          "Acetaldehyde accumulates in blood",
+          "Severe vasodilation and flushing",
+          "Nausea, vomiting, hypotension — disulfiram reaction"
+        ],
+        "effect": "Severe disulfiram-like reaction — nausea, flushing, dangerous hypotension",
+        "timing": "ABSOLUTE CONTRAINDICATION — no alcohol during treatment AND 48 hours after last dose",
+        "window": "Avoid alcohol for 48–72 hours after completing treatment",
+        "alternatives": [
+          "No alcohol whatsoever during and 48 hours post-treatment"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even small amounts (mouthwash, vanilla extract) can trigger severe reaction"
+      },
+      {
+        "food": "Foods with Propylene Glycol",
+        "emoji": "🍬",
+        "compound": "Propylene glycol",
+        "severity": "medium",
+        "mechanism": "Propylene glycol (used in some processed foods, candies, artificial flavors) is oxidized by alcohol dehydrogenase, the same pathway affected by Metronidazole. This interaction can produce a mild acetaldehyde-like toxic effect, though less severe than ethanol.",
+        "pathway": [
+          "Propylene glycol in food",
+          "Oxidized via alcohol dehydrogenase pathway",
+          "Metronidazole alters this pathway",
+          "Mild toxic metabolite accumulation",
+          "GI upset, mild nausea",
+          "Less severe than ethanol reaction"
+        ],
+        "effect": "Mild disulfiram-like GI upset",
+        "timing": "Avoid foods with propylene glycol during treatment",
+        "window": "During treatment course",
+        "alternatives": [
+          "Whole, unprocessed foods",
+          "Read ingredient labels carefully"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Large amounts of PG-containing foods may cause mild reactions"
+      },
+      {
+        "food": "Tyramine-rich Foods",
+        "emoji": "🧀",
+        "compound": "Tyramine",
+        "severity": "low",
+        "mechanism": "Unlike MAOIs, Metronidazole does not inhibit MAO enzymes. Tyramine-rich foods (aged cheese, fermented foods, cured meats) can be consumed safely with Metronidazole without risk of hypertensive crisis. No significant tyramine interaction exists.",
+        "pathway": [
+          "Tyramine consumed",
+          "MAO not inhibited by Metronidazole",
+          "Normal tyramine metabolism",
+          "No systemic accumulation",
+          "No blood pressure crisis",
+          "Safe to consume"
+        ],
+        "effect": "No significant interaction — tyramine foods safe with Metronidazole",
+        "timing": "No tyramine dietary restriction needed",
+        "window": "No restriction",
+        "alternatives": [
+          "No food restrictions for tyramine specifically"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Tyramine foods are safe with Metronidazole"
+      }
+    ]
+  },
+  "Glimepiride": {
+    "generic": "Glimepiride (Amaryl, Glimer, Glimpid)",
+    "class": "Sulfonylurea / Antidiabetic",
+    "mechanism": "Binds SUR1 receptor on pancreatic β-cells, closing K-ATP channels, triggering insulin secretion",
+    "halfLife": "5–8 hours",
+    "metabolism": "Hepatic CYP2C9; active metabolites M1 and M2",
+    "icon": "🔬",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "high",
+        "mechanism": "Alcohol inhibits hepatic gluconeogenesis (glucose production) and also inhibits CYP2C9, reducing Glimepiride metabolism. Combined, blood glucose drops severely. Unlike with Metformin, hypoglycemia from Glimepiride+alcohol can be prolonged and severe, as the drug forces insulin secretion regardless of blood glucose levels.",
+        "pathway": [
+          "Alcohol inhibits hepatic gluconeogenesis",
+          "↓ Blood glucose production",
+          "Glimepiride forces β-cell insulin secretion",
+          "↑ Insulin despite falling glucose",
+          "Severe prolonged hypoglycemia",
+          "Glucose < 3.0 mmol/L",
+          "Seizures, loss of consciousness"
+        ],
+        "effect": "Severe prolonged hypoglycemia — loss of consciousness, seizures",
+        "timing": "Avoid alcohol entirely with sulfonylureas",
+        "window": "Effect can persist 12+ hours; alcohol masks hypoglycemia symptoms",
+        "alternatives": [
+          "No alcohol with sulfonylureas",
+          "Always carry glucose tablets"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "Even 1–2 drinks can cause dangerous hypoglycemia lasting many hours"
+      },
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "medium",
+        "mechanism": "Glimepiride is metabolized by CYP2C9. Grapefruit primarily inhibits CYP3A4 but has minor effects on CYP2C9. This can modestly increase Glimepiride plasma levels, increasing insulin secretion and hypoglycemia risk — especially when combined with physical activity or skipped meals.",
+        "pathway": [
+          "Grapefruit → mild CYP2C9 inhibition",
+          "↓ Glimepiride metabolism",
+          "↑ Drug plasma levels",
+          "↑ Insulin secretion from β-cells",
+          "Blood glucose drops",
+          "Hypoglycemia risk elevated"
+        ],
+        "effect": "Modestly increased hypoglycemia risk",
+        "timing": "Limit grapefruit; monitor blood glucose closely",
+        "window": "Monitor BG for 24 hours after grapefruit consumption",
+        "alternatives": [
+          "Orange",
+          "Apple",
+          "Pear",
+          "Berries"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Large regular grapefruit intake combined with Glimepiride can cause hypoglycemia"
+      },
+      {
+        "food": "High-Sugar Foods",
+        "emoji": "🍰",
+        "compound": "Sucrose, fructose, glucose",
+        "severity": "medium",
+        "mechanism": "Glimepiride stimulates insulin secretion in a glucose-dependent manner. Consuming high-sugar meals without the drug can cause hyperglycemia. Conversely, exercising or skipping a meal after taking Glimepiride causes hypoglycemia since insulin is released regardless. Consistent meal timing is critical.",
+        "pathway": [
+          "Glimepiride taken → insulin secretion triggered",
+          "Meal skipped or delayed",
+          "Blood glucose low but insulin high",
+          "Hypoglycemia develops",
+          "OR large sugar load taken → hyperglycemia",
+          "Then drug-induced insulin surge",
+          "Blood glucose crash post-meal"
+        ],
+        "effect": "Erratic glucose control — hyper or hypoglycemia depending on meal timing",
+        "timing": "Always eat a meal within 30 minutes of taking Glimepiride",
+        "window": "Never skip meals when on sulfonylureas",
+        "alternatives": [
+          "Consistent low-GI meals",
+          "Never fast while on sulfonylurea therapy"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Skipping any meal after Glimepiride dose is dangerous"
+      }
+    ]
+  },
+  "Sitagliptin": {
+    "generic": "Sitagliptin Phosphate (Januvia, Istavel, Zita)",
+    "class": "DPP-4 Inhibitor / Antidiabetic (Gliptin)",
+    "mechanism": "Inhibits DPP-4 enzyme, preventing degradation of incretin hormones GLP-1 and GIP; enhances glucose-dependent insulin secretion",
+    "halfLife": "12.4 hours",
+    "metabolism": "Minimal hepatic (CYP3A4, CYP2C8); 79% excreted unchanged in urine",
+    "icon": "🔬",
+    "interactions": [
+      {
+        "food": "High-Fat Meals",
+        "emoji": "🍔",
+        "compound": "Dietary fats",
+        "severity": "low",
+        "mechanism": "Sitagliptin absorption is not significantly affected by food. High-fat meals do not alter its pharmacokinetics meaningfully. Unlike sulfonylureas, Sitagliptin only enhances insulin secretion when glucose is elevated (glucose-dependent), so meal composition has minimal impact on hypoglycemia risk.",
+        "pathway": [
+          "High-fat meal consumed",
+          "Minor delay in Sitagliptin absorption",
+          "Tmax slightly increased",
+          "Total AUC unchanged",
+          "Glucose-dependent insulin mechanism",
+          "No significant hypoglycemia risk from food interaction"
+        ],
+        "effect": "No clinically significant food interaction",
+        "timing": "Can be taken with or without food",
+        "window": "No restriction",
+        "alternatives": [
+          "No dietary restrictions specifically for Sitagliptin"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Food type does not significantly affect Sitagliptin"
+      },
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Alcohol inhibits gluconeogenesis, reducing blood glucose. Sitagliptin enhances glucose-dependent insulin secretion. Combined, hypoglycemia risk increases, especially in fasted states. The risk is lower than with sulfonylureas but still clinically relevant. Alcohol also worsens pancreatitis risk, a known concern with DPP-4 inhibitors.",
+        "pathway": [
+          "Alcohol → ↓ hepatic gluconeogenesis",
+          "↓ Blood glucose production",
+          "Sitagliptin enhances GLP-1/GIP",
+          "↑ Insulin secretion",
+          "Relative hypoglycemia",
+          "Worsened if fasting",
+          "Pancreatitis risk also elevated"
+        ],
+        "effect": "Moderate hypoglycemia risk; pancreatitis concern with chronic drinking",
+        "timing": "Limit alcohol; never drink on an empty stomach",
+        "window": "Acute risk with each alcohol ingestion",
+        "alternatives": [
+          "Non-alcoholic beverages",
+          "Limit to 1 drink with food"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Moderate regular drinking poses meaningful hypoglycemia and pancreatitis risk"
+      },
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "low",
+        "mechanism": "Sitagliptin is minimally metabolized by CYP3A4 (primarily excreted unchanged). Grapefruit's CYP3A4 inhibition has negligible effect on Sitagliptin plasma levels. This is a key advantage of Sitagliptin over some other antidiabetics — grapefruit does not pose a meaningful interaction risk.",
+        "pathway": [
+          "Grapefruit → CYP3A4 inhibition",
+          "Sitagliptin minimally CYP3A4-dependent",
+          "Negligible effect on drug levels",
+          "No significant pharmacokinetic change",
+          "No clinical impact"
+        ],
+        "effect": "No significant interaction — grapefruit safe with Sitagliptin",
+        "timing": "No grapefruit restriction needed",
+        "window": "No restriction",
+        "alternatives": [
+          "Grapefruit is safe with Sitagliptin"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Grapefruit does not meaningfully affect Sitagliptin levels"
+      }
+    ]
+  },
+  "Pioglitazone": {
+    "generic": "Pioglitazone Hydrochloride (Actos, Pioz, Glizone)",
+    "class": "Thiazolidinedione (TZD) / PPAR-γ Agonist / Antidiabetic",
+    "mechanism": "Activates PPAR-γ nuclear receptors, enhancing insulin sensitivity in adipose, muscle, and liver",
+    "halfLife": "3–7 hours (active metabolites: 16–24 hours)",
+    "metabolism": "Hepatic CYP2C8 (primary) and CYP3A4",
+    "icon": "🔬",
+    "interactions": [
+      {
+        "food": "Alcohol",
+        "emoji": "🍷",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Alcohol impairs hepatic glucose regulation and adds to insulin-sensitizing effects of Pioglitazone, increasing hypoglycemia risk, especially when fasting. Chronic alcohol use also increases liver fat and hepatotoxicity risk — compounding Pioglitazone's known hepatic concerns.",
+        "pathway": [
+          "Alcohol → ↓ gluconeogenesis",
+          "Pioglitazone → ↑ insulin sensitivity",
+          "Combined ↓ blood glucose",
+          "Hypoglycemia risk",
+          "Chronic drinking → liver fat accumulation",
+          "Pioglitazone concerns about liver health",
+          "Hepatotoxicity risk elevated"
+        ],
+        "effect": "Hypoglycemia and increased hepatotoxicity risk",
+        "timing": "Limit alcohol; monitor blood glucose and liver enzymes",
+        "window": "Chronic risk builds over time with regular heavy drinking",
+        "alternatives": [
+          "Non-alcoholic beverages",
+          "Occasional light drinking with food may be tolerated"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Chronic heavy drinking with Pioglitazone significantly elevates liver risk"
+      },
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "medium",
+        "mechanism": "Pioglitazone is primarily metabolized by CYP2C8 and secondarily by CYP3A4. Grapefruit inhibits CYP3A4 and to a lesser extent CYP2C8, potentially increasing Pioglitazone and its active metabolite levels. This can enhance insulin sensitization and increase hypoglycemia risk, as well as fluid retention.",
+        "pathway": [
+          "Grapefruit → CYP3A4/2C8 inhibition",
+          "↓ Pioglitazone metabolism",
+          "↑ Active drug and metabolite levels",
+          "Enhanced PPAR-γ activation",
+          "↑ Insulin sensitivity",
+          "Hypoglycemia risk",
+          "Fluid retention worsened"
+        ],
+        "effect": "Elevated drug levels — hypoglycemia and fluid retention risk",
+        "timing": "Limit grapefruit; monitor blood glucose and weight (fluid retention)",
+        "window": "Effect lasts 24–72 hours per serving",
+        "alternatives": [
+          "Orange",
+          "Apple",
+          "Mango"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Regular grapefruit consumption can meaningfully elevate Pioglitazone levels"
+      },
+      {
+        "food": "High-Fat / High-Calorie Diet",
+        "emoji": "🍔",
+        "compound": "Saturated fats, excess calories",
+        "severity": "medium",
+        "mechanism": "Pioglitazone promotes fat redistribution from visceral to subcutaneous stores and causes weight gain and fluid retention as known side effects. A high-calorie, high-fat diet amplifies weight gain and can worsen the edema and heart failure risk associated with TZDs. Healthy diet is essential alongside this medication.",
+        "pathway": [
+          "High-fat diet promotes adipogenesis",
+          "Pioglitazone activates PPAR-γ → ↑ fat cell differentiation",
+          "Amplified weight gain",
+          "↑ Fluid retention",
+          "Worsened peripheral edema",
+          "↑ Cardiac preload",
+          "Exacerbated heart failure risk in predisposed patients"
+        ],
+        "effect": "Amplified weight gain and fluid retention",
+        "timing": "Follow a calorie-controlled diet throughout Pioglitazone therapy",
+        "window": "Chronic effect — builds over weeks to months",
+        "alternatives": [
+          "Low-fat, high-fiber meals",
+          "Mediterranean diet recommended"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "High-calorie diet significantly amplifies TZD-associated weight gain and edema"
+      }
+    ]
+  },
+  "Atenolol": {
+    "generic": "Atenolol (Tenormin, Aten, Betacard)",
+    "class": "Beta-1 Selective Adrenergic Blocker (Cardioselective)",
+    "mechanism": "Selectively blocks cardiac β1-adrenergic receptors; reduces heart rate, contractility, blood pressure",
+    "halfLife": "6–9 hours",
+    "metabolism": "Minimal hepatic metabolism; 40–50% absorbed; excreted mostly unchanged in urine",
+    "icon": "💓",
+    "interactions": [
+      {
+        "food": "Orange Juice / Fruit Juices",
+        "emoji": "🍊",
+        "compound": "Naringenin, hesperidin (flavonoids)",
+        "severity": "high",
+        "mechanism": "Orange juice, apple juice, and grapefruit juice significantly inhibit intestinal OATP1A2 transporters that are critical for Atenolol absorption. Studies show these fruit juices reduce Atenolol AUC by 49–73%, dramatically reducing blood pressure and heart rate control. This is a clinically serious interaction often overlooked by patients.",
+        "pathway": [
+          "Fruit juice flavonoids consumed",
+          "OATP1A2 intestinal transporter inhibited",
+          "Atenolol cannot cross gut wall efficiently",
+          "Drug AUC reduced by 49–73%",
+          "Significantly lower plasma drug levels",
+          "Reduced β1 blockade",
+          "Poor heart rate and BP control"
+        ],
+        "effect": "Up to 73% reduction in drug absorption — dangerous loss of BP control",
+        "timing": "Always take Atenolol with WATER — never with juice",
+        "window": "Avoid fruit juice within 4 hours of each dose",
+        "alternatives": [
+          "Plain water is the only recommended beverage at dose time"
+        ],
+        "riskLevel": "High",
+        "quantityEffect": "A single glass of OJ or apple juice reduces Atenolol absorption by ~50%"
+      },
+      {
+        "food": "Alcohol",
+        "emoji": "🍷",
+        "compound": "Ethanol",
+        "severity": "medium",
+        "mechanism": "Alcohol causes peripheral vasodilation and mild cardiac depression. Atenolol blocks cardiac β1 receptors reducing heart rate and contractility. The combined effect causes excessive bradycardia (very slow heart rate) and hypotension, leading to dizziness, syncope, and falls.",
+        "pathway": [
+          "Alcohol → vasodilation",
+          "Atenolol → β1 blockade",
+          "Combined ↓ heart rate and BP",
+          "Bradycardia risk",
+          "Hypotension",
+          "Dizziness and syncope",
+          "Falls and injury, especially in elderly"
+        ],
+        "effect": "Additive blood pressure reduction — syncope and fall risk",
+        "timing": "Limit alcohol significantly during Atenolol therapy",
+        "window": "Acute effect with each drinking occasion",
+        "alternatives": [
+          "Non-alcoholic beverages",
+          "Maximum 1 drink with food if at all"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "2–3 drinks can cause significant symptomatic bradycardia and dizziness"
+      },
+      {
+        "food": "Caffeine",
+        "emoji": "☕",
+        "compound": "Caffeine",
+        "severity": "medium",
+        "mechanism": "Caffeine stimulates the sympathetic nervous system, increasing heart rate and blood pressure via adenosine antagonism and catecholamine release. This directly opposes Atenolol's β1-blocking effect. High caffeine intake can significantly reduce Atenolol's antihypertensive and heart rate-lowering efficacy.",
+        "pathway": [
+          "Caffeine → adenosine receptor blockade",
+          "Catecholamine release stimulated",
+          "↑ Heart rate and BP",
+          "Atenolol blocks β1 receptors",
+          "Blunts caffeine's cardiac effects",
+          "But large caffeine doses overwhelm β1 blockade",
+          "Reduced antihypertensive efficacy"
+        ],
+        "effect": "Caffeine reduces Atenolol's heart rate and BP-lowering efficacy",
+        "timing": "Limit caffeine to 1–2 cups per day maximum",
+        "window": "Acute effect with each caffeine dose",
+        "alternatives": [
+          "Decaf coffee",
+          "Herbal tea",
+          "Water"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "3+ cups of coffee significantly blunts Atenolol's therapeutic effect"
+      }
+    ]
+  },
+  "Loratadine": {
+    "generic": "Loratadine (Claritin, Lorfast, Alavert)",
+    "class": "Second-generation Antihistamine (H1 receptor antagonist)",
+    "mechanism": "Selective long-acting H1 receptor antagonist; minimal CNS penetration; no anticholinergic effects",
+    "halfLife": "8–12 hours (active metabolite desloratadine: 27 hours)",
+    "metabolism": "Extensive hepatic CYP3A4 and CYP2D6; active metabolite desloratadine",
+    "icon": "🌸",
+    "interactions": [
+      {
+        "food": "Grapefruit",
+        "emoji": "🍊",
+        "compound": "Furanocoumarins",
+        "severity": "medium",
+        "mechanism": "Loratadine is metabolized by CYP3A4 to its active metabolite desloratadine. Grapefruit inhibits CYP3A4, reducing this conversion and increasing parent drug levels. Elevated Loratadine can cause QT interval prolongation in rare cases, particularly in patients with pre-existing cardiac conditions or electrolyte abnormalities.",
+        "pathway": [
+          "Grapefruit → CYP3A4 inhibition",
+          "↓ Loratadine → desloratadine conversion",
+          "↑ Parent Loratadine levels",
+          "Potential cardiac K+ channel effects",
+          "QT prolongation risk (mild)",
+          "Greater concern in cardiac patients"
+        ],
+        "effect": "Modestly elevated drug levels — mild QT prolongation risk",
+        "timing": "Limit grapefruit — especially in cardiac patients",
+        "window": "Effect lasts 24–72 hours per serving",
+        "alternatives": [
+          "Orange",
+          "Apple juice",
+          "Regular citrus"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Large regular grapefruit consumption may moderately elevate Loratadine levels"
+      },
+      {
+        "food": "Fruit Juices (Apple, OJ)",
+        "emoji": "🍹",
+        "compound": "Organic acids, OATP inhibitors",
+        "severity": "medium",
+        "mechanism": "Like other second-generation antihistamines, Loratadine absorption may be reduced by large amounts of fruit juice through intestinal organic anion transporter (OATP) inhibition. Studies suggest fruit juice may reduce Loratadine AUC by up to 40%, reducing its antihistamine effectiveness.",
+        "pathway": [
+          "Fruit juice → OATP transporter inhibition",
+          "↓ Intestinal Loratadine uptake",
+          "Reduced drug bioavailability (up to 40%)",
+          "Lower plasma drug levels",
+          "Reduced H1 receptor occupancy",
+          "Allergy symptoms poorly controlled"
+        ],
+        "effect": "Up to 40% reduced absorption — reduced allergy control",
+        "timing": "Take Loratadine with water, not fruit juice",
+        "window": "Avoid fruit juice within 2 hours of dose",
+        "alternatives": [
+          "Plain water recommended at dose time"
+        ],
+        "riskLevel": "Medium",
+        "quantityEffect": "Large fruit juice with dose reduces effectiveness by up to 40%"
+      },
+      {
+        "food": "Alcohol",
+        "emoji": "🍺",
+        "compound": "Ethanol",
+        "severity": "low",
+        "mechanism": "Loratadine is marketed as 'non-drowsy' and has minimal CNS penetration. Unlike first-generation antihistamines, it does not significantly enhance alcohol's sedative effects at standard doses. However, some individuals may still experience mild additive sedation, so caution is advised, especially when driving.",
+        "pathway": [
+          "Loratadine → minimal CNS H1 blockade",
+          "Alcohol → GABA-A CNS depression",
+          "Minimal additive sedation in most people",
+          "Individual variation exists",
+          "Mild drowsiness in sensitive individuals",
+          "Driving may still be impaired in some"
+        ],
+        "effect": "Minimal sedation — safer than older antihistamines with alcohol",
+        "timing": "Generally safe in moderate amounts; avoid before driving",
+        "window": "Acute effect — be cautious same day",
+        "alternatives": [
+          "Moderation recommended; avoid before driving or operating machinery"
+        ],
+        "riskLevel": "Low",
+        "quantityEffect": "Moderate drinking usually safe; large amounts may cause mild sedation in some"
+      }
+    ]
+  }
+}
