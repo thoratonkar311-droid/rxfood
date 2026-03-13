@@ -6,12 +6,7 @@
 ![Node](https://img.shields.io/badge/Node.js-16%2B-green?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
----
 
-## 🚀 Live Demo
-**Deployed on Render:** `https://rxfood.onrender.com`
-
----
 
 ## ✨ Features
 - 🔍 **Search 35+ drugs** with autocomplete
