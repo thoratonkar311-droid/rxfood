@@ -126,5 +126,222 @@
 </div>
 
 <script src="app.js"></script>
+  <script>
+
+// ===== ELEMENTS =====
+const searchInput = document.getElementById("drugSearch");
+const suggestionsBox = document.getElementById("suggestions");
+const resultsContainer = document.getElementById("results");
+const quickPillsContainer = document.getElementById("quickPills");
+
+// ===== SAMPLE DATABASE =====
+const drugDatabase = [
+{
+name:"Warfarin",
+interactions:[
+{
+food:"Leafy Greens",
+severity:"high",
+reason:"Vitamin K reduces warfarin effectiveness.",
+pathway:[
+"Leafy greens consumed",
+"Vitamin K enters bloodstream",
+"Warfarin effect reduced",
+"Blood clotting increases"
+]
+},
+{
+food:"Cranberry Juice",
+severity:"medium",
+reason:"May increase bleeding risk.",
+pathway:[
+"Cranberry compounds absorbed",
+"Warfarin metabolism altered",
+"Drug concentration increases",
+"Bleeding risk rises"
+]
+}
+]
+},
+
+{
+name:"Simvastatin",
+interactions:[
+{
+food:"Grapefruit",
+severity:"high",
+reason:"Blocks CYP3A4 causing drug accumulation.",
+pathway:[
+"Grapefruit eaten",
+"Furanocoumarins inhibit CYP3A4",
+"Simvastatin metabolism decreases",
+"Drug levels increase",
+"Muscle toxicity risk rises"
+]
+}
+]
+},
+
+{
+name:"Metformin",
+interactions:[
+{
+food:"Alcohol",
+severity:"medium",
+reason:"May increase risk of lactic acidosis.",
+pathway:[
+"Alcohol consumed",
+"Liver metabolism changes",
+"Metformin accumulates",
+"Lactic acid increases"
+]
+}
+]
+}
+
+];
+
+
+// ===== QUICK PILLS =====
+function loadQuickPills(){
+
+drugDatabase.forEach(drug=>{
+let pill=document.createElement("button");
+pill.innerText=drug.name;
+pill.className="pill";
+
+pill.onclick=()=>{
+searchInput.value=drug.name;
+searchDrug();
+};
+
+quickPillsContainer.appendChild(pill);
+});
+
+}
+
+
+// ===== SEARCH FUNCTION =====
+function searchDrug(){
+
+let query=searchInput.value.toLowerCase();
+
+resultsContainer.innerHTML="";
+
+let drug=drugDatabase.find(d=>d.name.toLowerCase()===query);
+
+if(!drug){
+
+resultsContainer.innerHTML=
+"<p style='color:#aaa'>No drug found</p>";
+
+return;
+}
+
+drug.interactions.forEach(interaction=>{
+
+let card=document.createElement("div");
+card.className="interaction-card";
+
+card.innerHTML=`
+<h3>${interaction.food}</h3>
+<p>Severity: <b>${interaction.severity}</b></p>
+<p>${interaction.reason}</p>
+<button onclick="openInteractionModal('${interaction.food}','${interaction.reason}','${interaction.pathway.join("|")}')">
+View Pathway
+</button>
+`;
+
+resultsContainer.appendChild(card);
+
+});
+
+}
+
+
+// ===== AUTOCOMPLETE =====
+searchInput.addEventListener("input",()=>{
+
+let value=searchInput.value.toLowerCase();
+
+suggestionsBox.innerHTML="";
+
+if(value.length===0) return;
+
+drugDatabase.forEach(drug=>{
+
+if(drug.name.toLowerCase().includes(value)){
+
+let item=document.createElement("div");
+
+item.innerText=drug.name;
+
+item.onclick=()=>{
+searchInput.value=drug.name;
+suggestionsBox.innerHTML="";
+searchDrug();
+};
+
+suggestionsBox.appendChild(item);
+
+}
+
+});
+
+});
+
+
+// ===== MODAL =====
+function openInteractionModal(food,reason,pathway){
+
+let steps=pathway.split("|");
+
+let modal=document.createElement("div");
+modal.className="modal";
+
+let stepHTML="";
+
+steps.forEach(step=>{
+stepHTML+=`<li>${step}</li>`;
+});
+
+modal.innerHTML=`
+<div class="modal-content">
+
+<h2>${food} Interaction</h2>
+
+<p>${reason}</p>
+
+<h3>Molecular Pathway</h3>
+
+<ul>${stepHTML}</ul>
+
+<button onclick="this.parentElement.parentElement.remove()">Close</button>
+
+</div>
+`;
+
+document.body.appendChild(modal);
+
+}
+
+
+// ===== ENTER KEY SEARCH =====
+searchInput.addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+
+searchDrug();
+
+}
+
+});
+
+
+// ===== INIT =====
+loadQuickPills();
+
+</script>
+
 </body>
 </html>
