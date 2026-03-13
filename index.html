@@ -1,199 +1,270 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RxFood — Drug-Food Interaction Visualizer</title>
-  <meta name="description" content="Visualize chemical interactions between your drugs and food. Know what not to eat with your medication."/>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RxFood — Drug Food Interaction Visualizer</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+background:#0f1117;
+color:white;
+margin:0;
+padding:0;
+}
+
+header{
+text-align:center;
+padding:30px;
+font-size:28px;
+font-weight:bold;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.search-box{
+display:flex;
+gap:10px;
+margin-bottom:10px;
+}
+
+input{
+flex:1;
+padding:12px;
+border-radius:8px;
+border:none;
+font-size:16px;
+}
+
+button{
+padding:12px 18px;
+border:none;
+border-radius:8px;
+background:#4f46e5;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+opacity:.9;
+}
+
+#suggestions{
+background:#1c1f26;
+border-radius:6px;
+overflow:hidden;
+}
+
+#suggestions div{
+padding:8px;
+cursor:pointer;
+}
+
+#suggestions div:hover{
+background:#333;
+}
+
+.quick-pills{
+margin:10px 0;
+}
+
+.pill{
+padding:6px 12px;
+margin:4px;
+border:none;
+border-radius:20px;
+background:#1c1f26;
+color:white;
+cursor:pointer;
+}
+
+.results{
+margin-top:20px;
+}
+
+.card{
+background:#1c1f26;
+padding:16px;
+margin-bottom:12px;
+border-radius:10px;
+}
+
+.high{border-left:6px solid #ff4d4d;}
+.medium{border-left:6px solid #ffa500;}
+.low{border-left:6px solid #2ecc71;}
+
+.modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.modal-content{
+background:#1c1f26;
+padding:25px;
+border-radius:10px;
+max-width:500px;
+}
+
+footer{
+text-align:center;
+font-size:13px;
+color:#aaa;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+.search-box{
+flex-direction:column;
+}
+}
+
+</style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <div class="nav-logo">Rx<span>Food</span></div>
-  <div class="nav-links">
-    <a href="#search-sec">Search</a>
-    <a href="#how-sec">How It Works</a>
-    <a href="#about-sec">About</a>
-    <a href="/dashboard.html">📊 Dashboard</a>
-  </div>
-  <div class="nav-badge">Beta v2.0</div>
-</nav>
+<header>RxFood Interaction Visualizer</header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-tag">⚗️ Drug–Food Interaction Visualizer</div>
-  <h1>Know What <em>Not to Eat</em><br>With Your Medication</h1>
-  <p>Visualize chemical interactions between your drugs and food at a molecular level. Powered by real pharmacological data — explained in plain English.</p>
-  <div class="hero-stats">
-    <div class="stat"><div class="stat-num">35+</div><div class="stat-label">Drugs</div></div>
-    <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Interactions</div></div>
-    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Food Categories</div></div>
-    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Risk Levels</div></div>
-  </div>
-</section>
+<div class="container">
 
-<!-- SEARCH -->
-<div id="search-sec" class="search-section">
-  <div class="search-box">
-    <span class="search-icon">🔍</span>
-    <input id="searchInput" type="text"
-      placeholder="Search drug name e.g. Warfarin, Paracetamol, Metformin…"
-      autocomplete="off"/>
-    <button class="search-btn" onclick="searchDrug()">Analyze</button>
-    <div class="suggestions" id="suggestions"></div>
-  </div>
-  <div class="quick-pills" id="quickPills"></div>
+<div class="search-box">
+<input id="searchInput" placeholder="Search drug or food...">
+<button onclick="search()">Analyze</button>
 </div>
 
-<!-- RESULTS -->
-<div id="results"></div>
+<div id="suggestions"></div>
 
-<!-- HOW IT WORKS -->
-<section id="how-sec" class="section">
-  <div class="sec-label">Science Behind It</div>
-  <div class="sec-title">How Drug–Food<br>Interactions Work</div>
-  <p style="color:var(--dim);max-width:600px;line-height:1.7;">Food compounds can alter how your body absorbs, metabolizes, or excretes medications — sometimes dangerously increasing or decreasing drug levels in your blood.</p>
-  <div class="how-grid">
-    <div class="how-card">
-      <div class="how-num">01</div>
-      <div class="how-title">Enzyme Inhibition</div>
-      <div class="how-desc">Food compounds like furanocoumarins in grapefruit block CYP3A4 liver enzymes, causing drugs to accumulate to dangerous levels.</div>
-    </div>
-    <div class="how-card">
-      <div class="how-num">02</div>
-      <div class="how-title">Absorption Interference</div>
-      <div class="how-desc">Dairy calcium, iron in spinach, or high-fiber foods can bind to drug molecules in the gut, reducing absorption into the bloodstream.</div>
-    </div>
-    <div class="how-card">
-      <div class="how-num">03</div>
-      <div class="how-title">Vitamin K Antagonism</div>
-      <div class="how-desc">Blood thinners like Warfarin work by blocking Vitamin K. Eating large amounts of leafy greens floods the system and reduces drug effect.</div>
-    </div>
-    <div class="how-card">
-      <div class="how-num">04</div>
-      <div class="how-title">Tyramine Crisis</div>
-      <div class="how-desc">MAO inhibitors prevent tyramine breakdown. Eating aged cheese or cured meats causes dangerous blood pressure spikes — hypertensive crisis.</div>
-    </div>
-  </div>
-</section>
+<div class="quick-pills" id="quickPills"></div>
 
-<!-- ABOUT -->
-<section id="about-sec" class="section" style="border-top:1px solid var(--border)">
-  <div class="sec-label">About This Tool</div>
-  <div class="sec-title">Built for Patients,<br>Reviewed for Safety</div>
-  <p style="color:var(--dim);max-width:650px;line-height:1.7;margin-bottom:1.5rem;">RxFood aggregates drug-food interaction data from DrugBank, NIH DailyMed, and peer-reviewed pharmacology literature. Every interaction is explained at a molecular level, translated into clear language for non-experts.</p>
-  <div style="display:flex;gap:1rem;flex-wrap:wrap">
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem 1.5rem;font-size:.88rem">
-      <div style="color:var(--accent);font-family:'DM Mono',monospace;font-size:.75rem;margin-bottom:4px">DATA SOURCE</div>
-      <div>DrugBank v5.1 + NIH DailyMed</div>
-    </div>
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem 1.5rem;font-size:.88rem">
-      <div style="color:var(--accent3);font-family:'DM Mono',monospace;font-size:.75rem;margin-bottom:4px">API</div>
-      <div>REST API — <a href="/api/drugs" style="color:var(--accent)">View Docs</a></div>
-    </div>
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem 1.5rem;font-size:.88rem">
-      <div style="color:var(--accent2);font-family:'DM Mono',monospace;font-size:.75rem;margin-bottom:4px">LAST UPDATED</div>
-      <div>March 2026</div>
-    </div>
-  </div>
-</section>
+<div class="results" id="results"></div>
 
-<!-- DISCLAIMER -->
-<div class="disclaimer">
-  <div class="disclaimer-inner">
-    <div style="font-size:1.3rem;flex-shrink:0">⚠️</div>
-    <p><strong>Medical Disclaimer:</strong> RxFood is for informational and educational purposes only. It does not constitute medical advice. Always consult your physician or pharmacist before making changes to your diet or medication. Individual responses to drug-food interactions may vary.</p>
-  </div>
-</div>
-
-<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">RxFood</div>
-  <div class="footer-copy">© 2026 RxFood · Drug-Food Interaction Visualizer</div>
-  <div class="footer-links">
-    <a href="#how-sec">How It Works</a>
-    <a href="#about-sec">About</a>
-    <a href="/dashboard.html">Dashboard</a>
-    <a href="/api/drugs">API</a>
-  </div>
+⚠ Educational tool only. Consult healthcare professionals for medical advice.
 </footer>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" id="modalContent"></div>
 </div>
 
-<script src="app.js"></script>
-  <script>
+<script>
 
-// ===== ELEMENTS =====
-const searchInput = document.getElementById("drugSearch");
-const suggestionsBox = document.getElementById("suggestions");
-const resultsContainer = document.getElementById("results");
-const quickPillsContainer = document.getElementById("quickPills");
+const db = [
 
-// ===== SAMPLE DATABASE =====
-const drugDatabase = [
 {
-name:"Warfarin",
+drug:"Warfarin",
 interactions:[
 {
 food:"Leafy Greens",
 severity:"high",
-reason:"Vitamin K reduces warfarin effectiveness.",
+reason:"Vitamin K reduces anticoagulant effect",
 pathway:[
 "Leafy greens consumed",
-"Vitamin K enters bloodstream",
+"Vitamin K increases",
 "Warfarin effect reduced",
-"Blood clotting increases"
+"Clotting risk increases"
 ]
 },
 {
 food:"Cranberry Juice",
 severity:"medium",
-reason:"May increase bleeding risk.",
+reason:"May increase bleeding risk",
 pathway:[
 "Cranberry compounds absorbed",
-"Warfarin metabolism altered",
-"Drug concentration increases",
-"Bleeding risk rises"
+"Metabolism altered",
+"Warfarin level increases"
 ]
 }
 ]
 },
 
 {
-name:"Simvastatin",
+drug:"Simvastatin",
 interactions:[
 {
 food:"Grapefruit",
 severity:"high",
-reason:"Blocks CYP3A4 causing drug accumulation.",
+reason:"Blocks CYP3A4 metabolism",
 pathway:[
 "Grapefruit eaten",
-"Furanocoumarins inhibit CYP3A4",
-"Simvastatin metabolism decreases",
-"Drug levels increase",
-"Muscle toxicity risk rises"
+"CYP3A4 inhibited",
+"Drug metabolism reduced",
+"Statin toxicity risk"
 ]
 }
 ]
 },
 
 {
-name:"Metformin",
+drug:"Metformin",
 interactions:[
 {
 food:"Alcohol",
 severity:"medium",
-reason:"May increase risk of lactic acidosis.",
+reason:"May cause lactic acidosis",
 pathway:[
-"Alcohol consumed",
-"Liver metabolism changes",
-"Metformin accumulates",
-"Lactic acid increases"
+"Alcohol intake",
+"Liver metabolism change",
+"Lactate buildup"
+]
+}
+]
+},
+
+{
+drug:"Ibuprofen",
+interactions:[
+{
+food:"Alcohol",
+severity:"high",
+reason:"Increases stomach bleeding",
+pathway:[
+"Alcohol irritates stomach",
+"NSAID damages lining",
+"Bleeding risk increases"
+]
+}
+]
+},
+
+{
+drug:"Aspirin",
+interactions:[
+{
+food:"Alcohol",
+severity:"high",
+reason:"Higher risk of stomach bleeding",
+pathway:[
+"Alcohol intake",
+"Gastric irritation",
+"Platelet inhibition"
+]
+}
+]
+},
+
+{
+drug:"Ciprofloxacin",
+interactions:[
+{
+food:"Dairy",
+severity:"medium",
+reason:"Calcium blocks antibiotic absorption",
+pathway:[
+"Calcium binds drug",
+"Absorption reduced",
+"Antibiotic effect decreases"
 ]
 }
 ]
@@ -201,123 +272,119 @@ pathway:[
 
 ];
 
+const input=document.getElementById("searchInput");
+const suggestions=document.getElementById("suggestions");
+const results=document.getElementById("results");
+const quick=document.getElementById("quickPills");
 
-// ===== QUICK PILLS =====
-function loadQuickPills(){
-
-drugDatabase.forEach(drug=>{
-let pill=document.createElement("button");
-pill.innerText=drug.name;
-pill.className="pill";
-
-pill.onclick=()=>{
-searchInput.value=drug.name;
-searchDrug();
+function loadPills(){
+db.forEach(d=>{
+let b=document.createElement("button");
+b.className="pill";
+b.innerText=d.drug;
+b.onclick=()=>{
+input.value=d.drug;
+search();
 };
+quick.appendChild(b);
+});
+}
 
-quickPillsContainer.appendChild(pill);
+function search(){
+
+let q=input.value.toLowerCase();
+results.innerHTML="";
+
+db.forEach(d=>{
+
+if(d.drug.toLowerCase()==q){
+
+d.interactions.forEach(i=>{
+createCard(d.drug,i);
 });
 
 }
 
+d.interactions.forEach(i=>{
+if(i.food.toLowerCase()==q){
+createFoodCard(i.food,d.drug,i);
+}
+});
 
-// ===== SEARCH FUNCTION =====
-function searchDrug(){
+});
 
-let query=searchInput.value.toLowerCase();
-
-resultsContainer.innerHTML="";
-
-let drug=drugDatabase.find(d=>d.name.toLowerCase()===query);
-
-if(!drug){
-
-resultsContainer.innerHTML=
-"<p style='color:#aaa'>No drug found</p>";
-
-return;
 }
 
-drug.interactions.forEach(interaction=>{
+function createCard(drug,i){
 
 let card=document.createElement("div");
-card.className="interaction-card";
+card.className="card "+i.severity;
 
 card.innerHTML=`
-<h3>${interaction.food}</h3>
-<p>Severity: <b>${interaction.severity}</b></p>
-<p>${interaction.reason}</p>
-<button onclick="openInteractionModal('${interaction.food}','${interaction.reason}','${interaction.pathway.join("|")}')">
-View Pathway
-</button>
+<h3>${drug} + ${i.food}</h3>
+<p><b>Severity:</b> ${i.severity}</p>
+<p>${i.reason}</p>
+<button onclick="openModal('${i.food}','${i.reason}','${i.pathway.join("|")}')">View Pathway</button>
 `;
 
-resultsContainer.appendChild(card);
-
-});
+results.appendChild(card);
 
 }
 
+function createFoodCard(food,drug,i){
 
-// ===== AUTOCOMPLETE =====
-searchInput.addEventListener("input",()=>{
+let card=document.createElement("div");
+card.className="card "+i.severity;
 
-let value=searchInput.value.toLowerCase();
+card.innerHTML=`
+<h3>${food} with ${drug}</h3>
+<p><b>Severity:</b> ${i.severity}</p>
+<p>${i.reason}</p>
+`;
 
-suggestionsBox.innerHTML="";
+results.appendChild(card);
 
-if(value.length===0) return;
+}
 
-drugDatabase.forEach(drug=>{
+input.addEventListener("input",()=>{
 
-if(drug.name.toLowerCase().includes(value)){
+let q=input.value.toLowerCase();
+suggestions.innerHTML="";
 
-let item=document.createElement("div");
-
-item.innerText=drug.name;
-
-item.onclick=()=>{
-searchInput.value=drug.name;
-suggestionsBox.innerHTML="";
-searchDrug();
+db.forEach(d=>{
+if(d.drug.toLowerCase().includes(q)){
+let s=document.createElement("div");
+s.innerText=d.drug;
+s.onclick=()=>{
+input.value=d.drug;
+suggestions.innerHTML="";
+search();
 };
-
-suggestionsBox.appendChild(item);
-
+suggestions.appendChild(s);
 }
-
 });
 
 });
 
+function openModal(food,reason,path){
 
-// ===== MODAL =====
-function openInteractionModal(food,reason,pathway){
-
-let steps=pathway.split("|");
+let steps=path.split("|");
 
 let modal=document.createElement("div");
 modal.className="modal";
 
-let stepHTML="";
-
-steps.forEach(step=>{
-stepHTML+=`<li>${step}</li>`;
+let list="";
+steps.forEach(s=>{
+list+=`<li>${s}</li>`;
 });
 
 modal.innerHTML=`
 <div class="modal-content">
-
 <h2>${food} Interaction</h2>
-
 <p>${reason}</p>
-
 <h3>Molecular Pathway</h3>
-
-<ul>${stepHTML}</ul>
-
+<ul>${list}</ul>
 <button onclick="this.parentElement.parentElement.remove()">Close</button>
-
 </div>
 `;
 
@@ -325,23 +392,10 @@ document.body.appendChild(modal);
 
 }
 
-
-// ===== ENTER KEY SEARCH =====
-searchInput.addEventListener("keypress",function(e){
-
-if(e.key==="Enter"){
-
-searchDrug();
-
-}
-
-});
-
-
-// ===== INIT =====
-loadQuickPills();
+loadPills();
 
 </script>
 
 </body>
 </html>
+```
