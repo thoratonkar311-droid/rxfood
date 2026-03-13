@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RxFood — Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <style>
+    .dash-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 1.2rem; margin-bottom: 2rem; }
+    .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; position: relative; overflow: hidden; transition: all 0.25s; }
+    .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .stat-card.blue::before { background: linear-gradient(90deg, var(--accent), #60a5fa); }
+    .stat-card.purple::before { background: linear-gradient(90deg, var(--accent3), #ec4899); }
+    .stat-card.red::before { background: linear-gradient(90deg, var(--danger), #f87171); }
+    .stat-card.green::before { background: linear-gradient(90deg, var(--safe), #34d399); }
+    .stat-card.orange::before { background: linear-gradient(90deg, var(--warning), #fbbf24); }
+    .stat-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
+    .stat-card-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    .stat-card-num { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; margin-bottom: 0.2rem; }
+    .stat-card-num.blue { color: var(--accent); }
+    .stat-card-num.purple { color: var(--accent3); }
+    .stat-card-num.red { color: var(--danger); }
+    .stat-card-num.green { color: var(--safe); }
+    .stat-card-num.orange { color: var(--warning); }
+    .stat-card-label { font-size: 0.85rem; color: var(--muted); font-weight: 500; }
+    .dash-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+    .dash-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; }
+    .dash-card-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; }
+    .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 0.7rem; }
+    .bar-label { font-size: 0.82rem; color: var(--dim); min-width: 130px; font-family: 'DM Mono', monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bar-track { flex: 1; height: 8px; background: var(--surface2); border-radius: 4px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 4px; transition: width 0.8s ease; }
+    .bar-val { font-size: 0.8rem; color: var(--muted); min-width: 24px; text-align: right; }
+    .sev-row { display: flex; align-items: center; gap: 12px; padding: 0.8rem 0; border-bottom: 1px solid var(--border); }
+    .sev-row:last-child { border-bottom: none; }
+    .sev-circle { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .sev-circle.high { background: rgba(239,68,68,0.15); }
+    .sev-circle.medium { background: rgba(245,158,11,0.15); }
+    .sev-circle.low { background: rgba(16,185,129,0.15); }
+    .sev-name { flex: 1; font-weight: 500; }
+    .sev-count-badge { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; }
+    .sev-count-badge.high { color: var(--danger); }
+    .sev-count-badge.medium { color: var(--warning); }
+    .sev-count-badge.low { color: var(--safe); }
+    .drug-table { width: 100%; border-collapse: collapse; }
+    .drug-table th { text-align: left; font-size: 0.75rem; font-family: 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--border); }
+    .drug-table td { padding: 0.7rem 0.8rem; font-size: 0.88rem; border-bottom: 1px solid rgba(30,45,69,0.5); }
+    .drug-table tr:last-child td { border-bottom: none; }
+    .drug-table tr:hover td { background: rgba(0,212,255,0.03); }
+    .drug-table a { color: var(--accent); text-decoration: none; }
+    .drug-table a:hover { text-decoration: underline; }
+    .risk-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+    .risk-dot.high { background: var(--danger); }
+    .risk-dot.medium { background: var(--warning); }
+    .risk-dot.low { background: var(--safe); }
+    .food-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--surface2); border: 1px solid var(--border); border-radius: 20px; padding: 5px 12px; font-size: 0.82rem; margin: 3px; }
+    .food-chip .food-count { background: rgba(0,212,255,0.15); color: var(--accent); border-radius: 10px; padding: 1px 7px; font-size: 0.75rem; font-family: 'DM Mono', monospace; }
+    @media(max-width:768px) { .dash-row { grid-template-columns: 1fr; } nav .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Rx<span>Food</span></div>
+  <div class="nav-links">
+    <a href="/">← Back to App</a>
+    <a href="/api/drugs">API</a>
+    <a href="/api/stats">Stats JSON</a>
+  </div>
+  <div class="nav-badge">Dashboard</div>
+</nav>
+
+<div style="position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:2.5rem 2rem">
+
+  <div style="margin-bottom:2rem">
+    <div class="sec-label">Analytics</div>
+    <div class="sec-title" style="font-size:2rem">Database Dashboard</div>
+    <p style="color:var(--dim)">Live statistics from the RxFood drug interaction database</p>
+  </div>
+
+  <!-- KPI CARDS -->
+  <div class="dash-grid" id="kpiCards">
+    <div class="stat-card blue"><div class="stat-card-icon">💊</div><div class="stat-card-num blue" id="kTotalDrugs">—</div><div class="stat-card-label">Total Drugs</div></div>
+    <div class="stat-card purple"><div class="stat-card-icon">⚗️</div><div class="stat-card-num purple" id="kTotalInt">—</div><div class="stat-card-label">Total Interactions</div></div>
+    <div class="stat-card red"><div class="stat-card-icon">🚨</div><div class="stat-card-num red" id="kHigh">—</div><div class="stat-card-label">High Risk Interactions</div></div>
+    <div class="stat-card orange"><div class="stat-card-icon">⚠️</div><div class="stat-card-num orange" id="kMedium">—</div><div class="stat-card-label">Medium Risk</div></div>
+    <div class="stat-card green"><div class="stat-card-icon">✅</div><div class="stat-card-num green" id="kLow">—</div><div class="stat-card-label">Low Risk</div></div>
+  </div>
+
+  <!-- CHARTS ROW -->
+  <div class="dash-row">
+    <!-- By Severity -->
+    <div class="dash-card">
+      <div class="dash-card-title">Interactions by Severity</div>
+      <div id="sevChart"></div>
+    </div>
+    <!-- By Class -->
+    <div class="dash-card">
+      <div class="dash-card-title">Drugs by Class</div>
+      <div id="classChart"></div>
+    </div>
+  </div>
+
+  <!-- TABLES ROW -->
+  <div class="dash-row">
+    <!-- Most Dangerous Drugs -->
+    <div class="dash-card">
+      <div class="dash-card-title">⚠️ Most High-Risk Drugs</div>
+      <table class="drug-table" id="dangerTable">
+        <thead><tr><th>Drug</th><th>Class</th><th>High Risk</th><th>Total</th></tr></thead>
+        <tbody id="dangerBody"></tbody>
+      </table>
+    </div>
+    <!-- Most Dangerous Foods -->
+    <div class="dash-card">
+      <div class="dash-card-title">🍊 Most Dangerous Foods</div>
+      <div id="foodChips"></div>
+    </div>
+  </div>
+
+  <!-- FULL DRUG TABLE -->
+  <div class="dash-card" style="margin-bottom:2rem">
+    <div class="dash-card-title">📋 All Drugs in Database</div>
+    <table class="drug-table" id="allDrugsTable">
+      <thead><tr><th></th><th>Drug Name</th><th>Class</th><th>High</th><th>Medium</th><th>Low</th><th>Total</th></tr></thead>
+      <tbody id="allDrugsBody"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">RxFood</div>
+  <div class="footer-copy">© 2026 RxFood · Dashboard</div>
+  <div class="footer-links"><a href="/">App</a><a href="/api/drugs">API</a></div>
+</footer>
+
+<script>
+async function loadDashboard() {
+  try {
+    const [statsRes, drugsRes, foodsRes] = await Promise.all([
+      fetch('/api/stats').then(r => r.json()),
+      fetch('/api/drugs').then(r => r.json()),
+      fetch('/api/foods').then(r => r.json()),
+    ]);
+
+    renderKPIs(statsRes);
+    renderSevChart(statsRes);
+    renderClassChart(statsRes);
+    renderDangerTable(drugsRes.drugs);
+    renderAllDrugsTable(drugsRes.drugs);
+    renderFoodChips(foodsRes.foods);
+  } catch(e) {
+    console.error('Dashboard load failed:', e);
+    document.querySelector('.sec-title').textContent = '⚠️ Server not running';
+  }
+}
+
+function renderKPIs(stats) {
+  document.getElementById('kTotalDrugs').textContent = stats.totalDrugs;
+  document.getElementById('kTotalInt').textContent = stats.totalInteractions;
+  document.getElementById('kHigh').textContent = stats.bySeverity.high;
+  document.getElementById('kMedium').textContent = stats.bySeverity.medium;
+  document.getElementById('kLow').textContent = stats.bySeverity.low;
+}
+
+function renderSevChart(stats) {
+  const s = stats.bySeverity;
+  const total = s.high + s.medium + s.low;
+  const items = [
+    { label: 'High Risk', val: s.high, color: '#ef4444', icon: '🔴', cls: 'high' },
+    { label: 'Medium Risk', val: s.medium, color: '#f59e0b', icon: '🟡', cls: 'medium' },
+    { label: 'Low Risk', val: s.low, color: '#10b981', icon: '🟢', cls: 'low' },
+  ];
+  document.getElementById('sevChart').innerHTML = items.map(it => `
+    <div class="sev-row">
+      <div class="sev-circle ${it.cls}">${it.icon}</div>
+      <div class="sev-name">${it.label}</div>
+      <div class="bar-track" style="flex:1"><div class="bar-fill" style="width:${(it.val/total*100).toFixed(1)}%;background:${it.color}"></div></div>
+      <div class="sev-count-badge ${it.cls}">${it.val}</div>
+    </div>`).join('');
+}
+
+function renderClassChart(stats) {
+  const classes = Object.entries(stats.byClass).sort((a,b) => b[1]-a[1]);
+  const max = classes[0]?.[1] || 1;
+  const colors = ['#00d4ff','#a855f7','#ff6b35','#10b981','#f59e0b','#ef4444','#60a5fa','#34d399'];
+  document.getElementById('classChart').innerHTML = classes.map(([name, count], i) => `
+    <div class="bar-row">
+      <div class="bar-label" title="${name}">${name.split('/')[0].trim()}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(count/max*100).toFixed(1)}%;background:${colors[i%colors.length]}"></div></div>
+      <div class="bar-val">${count}</div>
+    </div>`).join('');
+}
+
+function renderDangerTable(drugs) {
+  const sorted = [...drugs]
+    .sort((a,b) => b.highRiskCount - a.highRiskCount)
+    .slice(0, 10);
+  document.getElementById('dangerBody').innerHTML = sorted.map(d => `
+    <tr>
+      <td><a href="/?drug=${d.name}" onclick="window.location='/';return false">${d.icon} ${d.name}</a></td>
+      <td style="color:var(--muted);font-size:.8rem">${d.class.split('/')[0]}</td>
+      <td><span class="risk-dot high"></span><strong style="color:var(--danger)">${d.highRiskCount}</strong></td>
+      <td style="color:var(--muted)">${d.interactionCount}</td>
+    </tr>`).join('');
+}
+
+function renderAllDrugsTable(drugs) {
+  // We need full details — fetch stats per drug
+  document.getElementById('allDrugsBody').innerHTML = drugs.map(d => `
+    <tr>
+      <td>${d.icon}</td>
+      <td><a href="/" onclick="event.preventDefault();window.location='/';">${d.name}</a></td>
+      <td style="color:var(--muted);font-size:.8rem;max-width:180px">${d.class}</td>
+      <td><span style="color:var(--danger);font-weight:600">${d.highRiskCount}</span></td>
+      <td><span style="color:var(--warning)">${d.interactionCount - d.highRiskCount}</span></td>
+      <td><span style="color:var(--safe)">—</span></td>
+      <td style="color:var(--muted)">${d.interactionCount}</td>
+    </tr>`).join('');
+}
+
+function renderFoodChips(foods) {
+  const top = foods.slice(0, 20);
+  const highRiskFoods = top.filter(f => f.affectedDrugs.some(d => d.severity === 'high'));
+  document.getElementById('foodChips').innerHTML = `
+    <p style="font-size:.82rem;color:var(--muted);margin-bottom:.8rem">Foods that interact with the most drugs:</p>
+    <div>${top.map(f => `
+      <span class="food-chip">
+        ${f.emoji} ${f.food}
+        <span class="food-count">${f.affectedDrugs.length} drugs</span>
+      </span>`).join('')}
+    </div>`;
+}
+
+window.addEventListener('DOMContentLoaded', loadDashboard);
+</script>
+</body>
+</html>
