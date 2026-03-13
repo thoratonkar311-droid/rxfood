@@ -12,15 +12,28 @@ async function boot() {
     showLoading();
 
     const res = await fetch('/api/drugs');
-    if (!res.ok) throw new Error("API request failed");
+
+    if (!res.ok) {
+      throw new Error("API request failed");
+    }
 
     const data = await res.json();
 
-    // Convert list into lookup map
-    data.drugs.forEach(drug => {
-      DRUGS[drug.name] = drug;
+    // Your API already returns an object of drugs
+    Object.keys(data).forEach(name => {
+      DRUGS[name] = data[name];
     });
 
+    drugNames = Object.keys(DRUGS);
+
+    hideLoading();
+    initUI();
+
+  } catch (err) {
+    console.error("Boot failed:", err);
+    showError();
+  }
+}
     drugNames = Object.keys(DRUGS);
 
     hideLoading();
