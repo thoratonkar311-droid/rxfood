@@ -14,15 +14,25 @@ async function boot() {
     const res = await fetch('/api/drugs');
 
     if (!res.ok) {
-      throw new Error("API request failed");
+      throw new Error("API failed");
     }
 
     const data = await res.json();
 
-    // Your API already returns an object of drugs
-    Object.keys(data).forEach(name => {
-      DRUGS[name] = data[name];
-    });
+    // API returns object of drugs
+    DRUGS = data;
+
+    // extract names
+    drugNames = Object.keys(DRUGS);
+
+    hideLoading();
+    initUI();
+
+  } catch (err) {
+    console.error("API connection failed:", err);
+    showError();
+  }
+}
 
     drugNames = Object.keys(DRUGS);
 
